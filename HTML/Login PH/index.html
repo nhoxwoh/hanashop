@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trường Tiểu học Everest - abc</title>
+    <link href="/everest/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="css/style.css" rel="Stylesheet" type="text/css" />
+    <link href="css/fixcss.css" rel="Stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="Stylesheet" type="text/css" />
+    
+               
+    <script src="js/jquery.js" type="text/javascript" ></script>
+            
+    
+  <script type="text/javascript">
+    kendo.culture("vi-VN");
+    gOptions.UrlTimKiemTheTaiSan = '/everest/TheTaiSan/TimKiemTheTaiSan';
+    gOptions.UrlTimKiemNhanSu = '/everest/TraCuuNhanSu/TimKiemNhanSu';
+    gOptions.UrlTimKiemHocSinh = '/everest/HoSoHocSinh/TimKiemHocSinh';
+    gOptions.UrlThayDoiMatKhau = '/everest/Account/Popupchagepassword';
+    gOptions.UrlDangXuat = '/everest/Account/PopupLogOff';
+    gOptions.UrlCauHinhHeThong = '/everest/CauHinhHeThong/EditPopup';
+    gOptions.UrlTieuChuanMamNon = '/everest/TieuChuanMamNon';
+    gOptions.UrlTieuChuanTieuHoc = '/everest/TieuChuanTieuHoc';
+    gOptions.UrlTieuChuanTrungHoc = '/everest/TieuChuanTrungHoc';
+    gOptions.UrlCoSoVatChatKhac = '/everest/CoSoVatChatKhac';
+    gOptions.UrlCoSoVatChatKhacPhongGDDT = '/everest/CoSoVatChatKhac/CoSoVCKhacPhongGDDT';
+    gOptions.UrlCoSoVatChatKhacSoGiaoDuc = '/everest/CoSoVatChatKhac/CoSoVCKhacSoGiaoDuc';
+    gOptions.UrlCoSoVatChatKhacVaThuVien = '/everest/CoSoVatChatKhac/ThongTinCoSoVatChatThuVien';
+    gOptions.UrlThongTinThietBiTruongHoc = '/everest/CoSoVatChat/ThongTinThietBiTruongHoc';
+    gOptions.UrlQuyetDinhKyLuat = '/everest/QuyetDinhKyLuat';
+    gOptions.UrlQuyetDinhDieuDong = '/everest/QuyetDinhDieuDong';
+    gOptions.UrlQuyetDinhNangLuong = '/everest/QuyetDinh/QuyetDinhNangLuong';
+    gOptions.UrlQuyetDinhChamDutHopDong = '/everest/QuyetDinhChamDutHopDong';
+    gOptions.UrlQuyetDinhThamNienNhaGiao = '/everest/QuyetDinhThamNienNhaGiao';
+    gOptions.UrlQuyetDinhNangThamNienNhaGiao = '/everest/QuyetDinhNangThamNienNhaGiao';
+    gOptions.UrlQuyetDinhKhenThuong = '/everest/QuyetDinhKhenThuong';
+    gOptions.UrlQuyetDinhNghiKhongLuong = '/everest/QuyetDinhNghiKhongLuong';
+    gOptions.UrlQuyetDinhTroLaiCongTac = '/everest/QuyetDinhTroLaiCongTac';
+    gOptions.UrlQuyetDinhNghiHuu = '/everest/QuyetDinhNghiHuu';
+    gOptions.UrlQuyetDinhThoiGiuChuc = '/everest/QuyetDinhThoiGiuChuc';
+    gOptions.UrlQuyetDinhBoNhiem = '/everest/QuyetDinh/QuyetDinhBoNhiem';
+    gOptions.UrlQuyetDinhCuDiHoc = '/everest/QuyetDinhCuDiHoc';
+    gOptions.UrlQuyetDinhBoNhiemToBoMon = '/everest/QuyetDinhBoNhiemToBoMon';
+    gOptions.UrlKyLaiHopDong = '/everest/QuyetDinh/KyLaiHopDong';
+    gOptions.UrlDanhMucMonHoc = '/everest/Common/DanhSachMonHoc';
+    gOptions.UrlDonTuiDanhPhach = '/everest/TuyenSinh/DonTuiDanhPhach';
+    gOptions.UrlImportHocSinhMamNon = '/everest/HoSoHocSinh/ImportHocSinhMamNon';
+    gOptions.UrlImportHocSinhTieuHoc = '/everest/HoSoHocSinh/ImportHocSinhTieuHoc';
+    gOptions.UrlGetIDNienHocHienTai = '/everest/Common/GetIDNienHocGanNhat';
+    gOptions.UrlCheckDotTuyenSinhIsDaThi = '/everest/Common/CheckDotTuyenSinhIsDaThi';
+    gOptions.GridPopupSortUrl = "/everest/Common/PopupSort";
+    gOptions.CheckKhoaBangLuong = "/everest/NhanSu/CheckKhoaBangLuong";
+    gOptions.UrlDanhMucMucDoDoKho = "/everest/ThiTrucTuyen/DanhMucMucDoDoKho";
+    gOptions.UrlXemChiTietCauHoi = '/everest/ThiTrucTuyen/ViewCauHoi';
+    gOptions.UrlXemBoDeThi = '/everest/ThiTrucTuyen/XemBoDeThi';
+    gOptions.UrlTimKiemTruong = '/everest/Common/TimKiemTruong';
+    gOptions.UrlThanhToanHocPhi = '/everest/ThanhToan/ThanhToanHocPhi';
+    gOptions.UrlThanhToanNgoaiKeHoach = '/everest/ThanhToan/ThuNgoaiKeHoach';
+    gOptions.UrlHuyPhieuThu = '/everest/ThanhToan/HuyPhieuThu';
+    gOptions.UrlSoGiaoDuc = '/everest/DanhMucSoGiaoDuc/EditSoGiaoDuc';
+    gOptions.UrlPopupTimKiemGiaoVienHopDong = '/everest/TraCuuNhanSu/TimKiemGiaoVienHopDong';
+    gOptions.UrlPhieuChiMienGiam = '/everest/ThanhToan/PhieuChiMienGiam';
+    gOptions.UrlTrichXuatBaoCaoTheoCV = '/everest/ThongKeGiaoDuc/TrichXuatBaoCaoCV';
+    gOptions.UrlGopTruong = '/everest/HeThong/GopTruong';
+    gOptions.UrlCauHinhMayIn = '/everest/HeThong/CauHinhMayIn';
+        gOptions.UrlCauHinhKeHoachThuGhiDanh = '/everest/HeThong/KeHoachThuGhiDanh';
+
+    // đơn vị
+    gOptions.LoaiDonVi = { SoGiaoDuc: 1, PhongGDDT: 2, Truong: 3 };
+    </script>
+
+</head>
+<body data-default-error-msg="Đ&#227; c&#243; lỗi xảy ra! Xin thử lại sau."
+      data-update-success-msg="Cập nhật th&#224;nh c&#244;ng!"
+      data-has-changes-msg="C&#243; dữ liệu thay đổi, bạn c&#243; muốn lưu kh&#244;ng?"
+      data-no-change-msg="Kh&#244;ng c&#243; dữ liệu thay đổi"
+      data-no-data-to-display-msg="Kh&#244;ng c&#243; dữ liệu để hiển thị"
+      data-accept-txt="C&#243;"
+      data-not-accept-txt="Kh&#244;ng"
+      data-cancel-txt="Hủy"
+      data-not-correct-filetype-word-excel-txt="Chỉ upload c&#225;c file c&#243; định dạng .xls, .doc"
+      data-not-correct-filetype-txt="File kh&#244;ng đ&#250;ng định dạng"
+      data-select-one="Nhiều d&#242;ng dữ liệu đ&#227; được chọn. Bạn chỉ được chọn một d&#242;ng" class="nav-md">
+    
+    <!--[if lt IE 8]>
+         <script>
+         if(!window.externalHost)
+         {
+             window.location.href = '/everest/Error/ErrorIE?backurl=%2Feverest%2FPhuHuynhHocSinh%2FHoSoHocSinh%2F1756';
+         }
+         </script>
+     <![endif]-->
+    
+
+
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile">
+            <div class="profile_pic">
+                    <img src="images/avatar.jpg" class="img-circle profile_img" alt="">
+            </div>
+            <div class="profile_info">
+                <span>Trần Ngọc Mỹ An</span>
+                <h2>1700139</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br>
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>Thông tin</h3>
+                <ul class="nav side-menu">
+                    <li class="">
+                        <a href="/everest/PhuHuynhHocSinh/HoSoHocSinh/1756"><i class="fa fa-home"></i> Hồ sơ </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/TinTucNew/1756"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Tin tức & thông báo </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/DiemDanh/1756"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Điểm danh </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/TheoDoiDichVuNgoaiGio/1756"><i class="fa fa-share" aria-hidden="true"></i> Theo dõi dịch vụ ngoài giờ </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/BangSaoKeCongNoHocSinh/1756"><i class="fa fa-credit-card" aria-hidden="true"></i> Theo dõi công nợ </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/LichHoc/1756"><i class="fa fa-id-card-o" aria-hidden="true"></i> Lịch học </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/ThucDonMamNon/1756"><i class="fa fa-calendar-o" aria-hidden="true"></i> Thực đơn </a>
+                    </li>
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/KetQuaHocTap/1756"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Kết quả học tập </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_section">
+                <h3>Trao đổi</h3>
+                <ul class="nav side-menu" style="">
+                    <li>
+                        <a href="/everest/PhuHuynhHocSinh/HoiDap/1756"><i class="fa fa-comment-o" aria-hidden="true"></i> Hỏi đáp </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /sidebar menu -->
+        <!-- /menu footer buttons -->
+        <div class="sidebar-footer hidden-small">
+            <a href="javascript:" id="lnkThayDoiMatKhau" data-toggle="tooltip" data-placement="top" title="Đổi mật khẩu" data-original-title="Đổi mật khẩu">
+                <span class="fa fa-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen" data-original-title="FullScreen">
+                <span class="fa fa-arrows-alt" aria-hidden="true"></span>
+            </a>
+            <a href="/everest/PhuHuynhHocSinh/HoiDap/1756" data-toggle="tooltip" data-placement="top" title="Hỏi đáp" data-original-title="Hỏi đáp">
+                <span class="fa fa-comment-o" aria-hidden="true"></span>
+            </a>
+            <a href="/everest/PhuHuynhHocSinh/LogOff" data-toggle="tooltip" data-placement="top" title="Thoát" data-original-title="Thoát">
+                <span class="fa fa-power-off" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- /menu footer buttons -->
+    </div>
+</div>
+
+<!-- top navigation -->
+<div class="top_nav">
+    <div class="nav_menu">
+        <nav class="" role="navigation">
+            <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/everest/PhuHuynhHocSinh/LogOff"><span class="fa fa-power-off" aria-hidden="true"></span> Thoát</a></li>
+                
+
+                
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- /top navigation -->
+
+<script>
+    $(document).ready(function () {
+        $("#lnkThayDoiMatKhau").on("click", function () {
+            var url = "/everest/PhuHuynhHocSinh/DoiMatKhau/1756";
+            $(window).showPopupView("popupChangePassword", url);
+        });
+    });
+</script>
+        <div class="page min-width div-phuhuynh">
+            <div id="middle">
+                <div id="main">
+                    <!-- page content -->
+                    <div class="right_col" role="main" style="min-height: 930px;">
+                        
+<div class="">
+    <div class="page-title">
+        <div class="title_left width100percent">
+            <h3>Hồ sơ học sinh</h3>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 profile_left">
+                    <style>
+    .img-307 {
+        width: 245px;
+        height: 245px;
+        margin: auto;
+    }
+
+    .min-width-20 {
+        min-width: 20px;
+    }
+
+    .width100percent {
+        width: 100%!important;
+    }
+
+    #LeftInfo li {
+        line-height: 2;
+    }
+</style>
+<div class="panel panel-primary">
+    <div class="panel-heading">Thông tin</div>
+    <div class="panel-body">
+        <div class="col-md-4 col-sm-4 col-xs-12 ">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 profile_details">
+                    <div class="well profile_view">
+                        <div class="col-sm-12">
+                            <h4 class="brief"><i>Thông tin học sinh</i></h4>
+                            <div class="profile_img col-xs-12">
+                                <!-- end of image cropping -->
+                                <div id="crop-avatar">
+                                    <!-- Current avatar -->
+                                    <img src="images/avatar.jpg" class="img-circle img-responsive img-307" alt="">
+
+                                    <!-- Loading state -->
+                                    <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+                                </div>
+                                <!-- end of image cropping -->
+                            </div>
+                            <div class="left col-xs-12">
+                                <h2>Trần Ngọc Mỹ An</h2>
+
+                                <ul class="list-unstyled">
+                                    <li>  <i class="fa fa-transgender-alt min-width-20" aria-hidden="true"></i> Giới tính: Nữ </li>
+                                    <li>  <i class="glyphicon glyphicon-calendar fa fa-calendar min-width-20"></i> Ngày sinh: <span>14/11/2011</span>  </li>
+                                    <li> <i class="fa fa-flag-checkered min-width-20" aria-hidden="true"></i> Dân tộc: Kinh </li>
+                                    <li>
+                                        <i class="fa fa-map-marker user-profile-icon min-width-20"></i> Địa chỉ:
+HCM                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-sm-8 col-xs-12" id="LeftInfo">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12 profile_details">
+                    <div class="well profile_view width100percent">
+                        <div class="col-sm-12">
+                            <h4 class="brief"><i>Thông tin trường học</i></h4>
+                            <div class="left col-xs-12">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa fa-university min-width-20" aria-hidden="true"></i> Trường:
+Trường tiểu học Thuận Kiều                                    </li>
+                                    <li>
+                                        <i class="fa fa-clock-o min-width-20" aria-hidden="true"></i> Niên học:
+2017 - 2018                                    </li>
+                                    <li>
+                                        <i class="fa fa-level-up min-width-20" aria-hidden="true"></i> Lớp học:
+Lớp 1D                                    </li>
+                                    <li>
+                                        <i class="fa fa-adjust min-width-20" aria-hidden="true"></i> Trạng thái:
+Đang học                                    </li>
+                                    <li>
+                                        <i class="fa fa-universal-access min-width-20" aria-hidden="true"></i> GVCN:
+Nguyễn Ch&#237; Thanh                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 profile_details">
+                    <div class="well profile_view width100percent">
+                        <div class="col-sm-12">
+                            <h4 class="brief"><i>Thông tin cha</i></h4>
+                            <div class="left col-xs-12">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa fa-male min-width-20" aria-hidden="true"></i> Tên cha:
+Trần Văn Đổng                                    </li>
+                                    <li>
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar min-width-20"></i> Năm sinh:
+                                        <span>
+                                                <span> 1958</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-briefcase user-profile-icon min-width-20"></i> Nghề nghiệp:
+Kỹ sư c&#244;ng nghệ                                    </li>
+                                    <li>
+                                        <i class="fa fa-volume-control-phone min-width-20" aria-hidden="true"></i> Điện thoại:
+0932412589                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker user-profile-icon min-width-20"></i> Địa chỉ:
+180 Trường Sa, P12, Quận 3, TP.HCM                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 profile_details">
+                    <div class="well profile_view width100percent">
+                        <div class="col-sm-12">
+                            <h4 class="brief"><i>Thông tin mẹ</i></h4>
+                            <div class="left col-xs-12">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa fa-female min-width-20" aria-hidden="true"></i> Tên mẹ:
+Nguyễn Ngọc Trinh                                    </li>
+                                    <li>
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar min-width-20"></i> Năm sinh:
+                                        <span>
+                                                <span> 1960</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa fa-briefcase user-profile-icon min-width-20"></i> Nghề nghiệp:</span>
+Nội trợ                                    </li>
+                                    <li>
+                                        <i class="fa fa-volume-control-phone min-width-20" aria-hidden="true"></i> Điện thoại
+0988457896                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker user-profile-icon  min-width-20"></i> Địa chỉ:
+180 Trường Sa, P12, Quận 3, TP.HCM                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Khen thưởng & Kỷ luật</div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="k-grid-header">
+                            <tr>
+                                <th class="text-center" rowspan="2">STT</th>
+                                <th class="text-center" rowspan="2">Năm học</th>
+                                <th class="text-center" rowspan="2">Lớp</th>
+                                <th class="text-center" rowspan="1" colspan="2">Khen thưởng đột xuất</th>
+                                <th class="text-center" rowspan="1" colspan="2">Cuối năm</th>
+                                <th class="text-center" rowspan="2">GhiChu</th>
+                            </tr>
+                            <tr>
+                                <th class="text-center">Thành tích/Những điều cần khắc phục, giúp đỡ</th>
+                                <th class="text-center">Khen thưởng</th>
+                                <th class="text-center">Thành tích/Những điều cần khắc phục, giúp đỡ</th>
+                                <th class="text-center">Khen thưởng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>2017 - 2018</td>
+                                        <td>Lớp 1D</td>
+                                        <td>
+                                            Học sinh giỏi to&#224;n trường
+                                        </td>
+                                        <td>Giấy khen</td>
+                                        <td>Học sinh giỏi to&#224;n trường</td>
+                                        <td>Giấy khen, Balo, Tập HS</td>
+                                        <td></td>
+                                    </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Thời khóa biểu</div>
+            <div class="panel-body">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="" style="min-height: 377px;">
+                            <thead class="k-grid-header">
+                                <tr>
+                                    <th class="text-center">Tiết</th>
+                                    <th class="text-center">Thứ hai</th>
+                                    <th class="text-center">Thứ ba</th>
+                                    <th class="text-center">Thứ tư</th>
+                                    <th class="text-center">Thứ năm</th>
+                                    <th class="text-center">Thứ sáu</th>
+                                    <th class="text-center">Thứ bảy</th>
+                                    <th class="text-center">Chủ nhật</th>
+                                </tr>
+                            </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="8" style="font-weight: bold;">CA S&#193;NG</td>
+                                    </tr>
+
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;" class="text-center td-center">Tiết 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;" class="text-center td-center">Tiết 2</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;" class="text-center td-center">Tiết 3</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;" class="text-center td-center">Tiết 4</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;" class="text-center td-center">Tiết 5</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    <tr>
+                                        <td colspan="8" style="font-weight: bold;">CA CHIỀU</td>
+                                    </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;">Tiết 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;">Tiết 2</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;">Tiết 3</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;">Tiết 4</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center; font-weight: bold;">Tiết 5</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                    
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Thực đơn</div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="ThucDonTuanManNon" style="min-height: 377px;">
+                        <thead class="k-grid-header">
+                            <tr>
+                                <th></th>
+                                <th class="text-center">
+                                    Monday
+                                    <br />
+                                    (Thứ hai)
+                                </th>
+                                <th class="text-center">
+                                    Tuesday
+                                    <br />
+                                    (Thứ ba)
+                                </th>
+                                <th class="text-center">
+                                    Wednesday
+                                    <br />
+                                    (Thứ tư)
+                                </th>
+                                <th class="text-center">
+                                    Thursday
+                                    <br />
+                                    (Thứ năm)
+                                </th>
+                                <th class="text-center">
+                                    Friday
+                                    <br />
+                                    (Thứ sáu)
+                                </th>
+                                <th class="text-center">
+                                    Saturday
+                                    <br />
+                                    (Thứ bảy)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".table-bordered td a").kendoTooltip({
+            position: "top",
+            autoHide: true,
+            width: 120
+        });
+
+        $(".k-button").kendoTooltip({
+            position: "top",
+            autoHide: true,
+            width: 120
+        });
+    });
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                    <!-- /page content -->
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <!-- footer content -->
+        <footer>
+    <div class="pull-right">
+        <b>&copy;</b>Bản quyền 2017 thuộc về EVEREST
+        Thiết kể bởi <a href="http://ascvn.com.vn/" target="_blank"><span class="company-name">ASC</span></a>
+
+    </div>
+    <div class="clearfix"></div>
+</footer>
+
+        <!-- /footer content -->
+        
+       
+
+    </div>
+</div>
+<script src="/everest/Content/fastclick/lib/fastclick.js"></script>
+<script src="/everest/Content/nprogress/nprogress.js"></script>
+
+<script src="/everest/Content/gentelella/js/custom.js"></script>
+
+
+
+    
+    
+    
+
+
+    
+</body>
+</html>

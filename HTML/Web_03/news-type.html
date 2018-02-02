@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục tin</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.meanmenu.js"></script>
+    <script type="text/javascript" src="js/jquery.slider.plugins.js"></script>
+    <script type="text/javascript" src="js/jquery.slider.revolution.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.marquee.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+        <div class="rg-image-wrapper">
+            <!--         {{if itemsCount > 1}}
+            <div class="rg-image-nav">
+                <a href="#" class="rg-image-nav-prev">Previous Image</a>
+                <a href="#" class="rg-image-nav-next">Next Image</a>
+            </div>
+            {{/if}} -->
+            <div class="rg-image"></div>
+            <div class="rg-loading"></div>
+            <div class="rg-caption-wrapper">
+                <div class="rg-caption" style="display:none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="bannerLogo">
+                <a href="#"><img src="images/tmp/banner.jpg" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="main-menu">
+        <div class="container">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a class="nav-menu-link" href="#">Trang chủ</a></li>
+                    <li><a class="nav-menu-link" href="#">Giới thiệu</a></li>
+                    <li class="dropmenu"><a href="#" class="drop-link nav-menu-link">Tin tức</a>
+                        <ul>
+                            <li><a href="#" class="dropmenu-link">Second Level Link</a></li>
+                            <li><a href="#" class="dropmenu-link">Third Level Link</a></li>
+                            <li><a href="#" class="dropmenu-link">Second Level Link</a></li>
+                            <li><a href="#" class="dropmenu-link">Second Level Link</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-menu-link" href="#">Tài nguyên download</a></li>
+                    <li><a class="nav-menu-link" href="#">Thư viện ảnh</a></li>
+                    <li><a class="nav-menu-link" href="#">Video</a></li>
+                    <li><a class="nav-menu-link" href="#">Liên hệ</a></li>
+                </ul>
+                <ul>
+                    <li class="search-icon">
+                        <i id="toggle-search" class="fa fa-search"></i>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-search-wrap">
+            <a href="#" class="search-close-icon"><i class="fa fa-times"></i></a>
+            <div class="top-search-input-wrap">
+                <div class="top-search-overlay"></div>
+                <form action="#" method="get">
+                    <div class="search-wrap">
+                        <div class="search  pull-right school-top-search">
+                            <div class="sp_search_input">
+                                <input value="" name="s" class="form-control" placeholder="Search . . . . ." autocomplete="off" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-text">
+                        <ul>
+                            <li>
+                                <h2><a href="#">Trang chủ</a></h2> <i class="fa fa-angle-right"></i></li>
+                            <li>
+                                <h2><a href="#">Danh mục tin tức</a></h2><i class="fa fa-angle-right"></i></li>
+                            <li>
+                                <h2><a href="#">Loại tin tức</a></h2></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 center-fx">
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>THÔNG BÁO</h2>
+                        </div>
+                        <div class="single-box-content ">
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>VIDEO CLIP</h2>
+                        </div>
+                        <div class="single-box-content ">
+                            <div class="video-list">
+                                <iframe src="https://www.youtube.com/embed/Ov18oM3AtpA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-list">
+                                <iframe src="https://www.youtube.com/embed/Ov18oM3AtpA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                            </div>
+                            <div class="read-more">
+                                <a href="#">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>QUẢNG CÁO</h2>
+                        </div>
+                        <div class="single-box-content ">
+                            <div class="adv-list ">
+                                <div class="adv-list-item">
+                                    <a href="#"><img src="images/tmp/banner-adv.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 left-fx no-pd">
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>HOẠT ĐỘNG SỰ KIỆN</h2>
+                        </div>
+                        <div class="single-box-content style-tb">
+                            <div class="nb-root mb20">
+                                <div class="nb-root-image">
+                                    <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                </div>
+                                <h3><a href="#">Giải pháp nâng cao năng lực nghề nghiệp đội ngũ nhà giáo</a></h3>
+                                <div class="nb-root-date">
+                                    <span><i class="fa fa-clock-o"></i>12/02/2017</span>
+                                </div>
+                                <div class="nb-root-text">
+                                    GD&amp;TĐ - TS. Trần Kiêm Minh và PGS.TS. Nguyễn Thành Nhân (Trường ĐH Sư phạm, Đại học Huế) tổng hợp <a href="#" class="read-more">Xem thêm</a>
+                                </div>
+                            </div>
+                            <div class="nb-root mb20">
+                                <div class="nb-root-image">
+                                    <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                </div>
+                                <h3><a href="#">Giải pháp nâng cao năng lực nghề nghiệp đội ngũ nhà giáo</a></h3>
+                                <div class="nb-root-date">
+                                    <span><i class="fa fa-clock-o"></i>12/02/2017</span>
+                                </div>
+                                <div class="nb-root-text">
+                                    GD&amp;TĐ - TS. Trần Kiêm Minh và PGS.TS. Nguyễn Thành Nhân (Trường ĐH Sư phạm, Đại học Huế) tổng hợp <a href="#" class="read-more">Xem thêm</a>
+                                </div>
+                            </div>
+                            <div class="nb-root mb20">
+                                <div class="nb-root-image">
+                                    <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                </div>
+                                <h3><a href="#">Giải pháp nâng cao năng lực nghề nghiệp đội ngũ nhà giáo</a></h3>
+                                <div class="nb-root-date">
+                                    <span><i class="fa fa-clock-o"></i>12/02/2017</span>
+                                </div>
+                                <div class="nb-root-text">
+                                    GD&amp;TĐ - TS. Trần Kiêm Minh và PGS.TS. Nguyễn Thành Nhân (Trường ĐH Sư phạm, Đại học Huế) tổng hợp <a href="#" class="read-more">Xem thêm</a>
+                                </div>
+                            </div>
+                            <div class="nb-root mb20">
+                                <div class="nb-root-image">
+                                    <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                </div>
+                                <h3><a href="#">Giải pháp nâng cao năng lực nghề nghiệp đội ngũ nhà giáo</a></h3>
+                                <div class="nb-root-date">
+                                    <span><i class="fa fa-clock-o"></i>12/02/2017</span>
+                                </div>
+                                <div class="nb-root-text">
+                                    GD&amp;TĐ - TS. Trần Kiêm Minh và PGS.TS. Nguyễn Thành Nhân (Trường ĐH Sư phạm, Đại học Huế) tổng hợp <a href="#" class="read-more">Xem thêm</a>
+                                </div>
+                            </div>
+                            <div class="nb-root mb20">
+                                <div class="nb-root-image">
+                                    <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                </div>
+                                <h3><a href="#">Giải pháp nâng cao năng lực nghề nghiệp đội ngũ nhà giáo</a></h3>
+                                <div class="nb-root-date">
+                                    <span><i class="fa fa-clock-o"></i>12/02/2017</span>
+                                </div>
+                                <div class="nb-root-text">
+                                    GD&amp;TĐ - TS. Trần Kiêm Minh và PGS.TS. Nguyễn Thành Nhân (Trường ĐH Sư phạm, Đại học Huế) tổng hợp <a href="#" class="read-more">Xem thêm</a>
+                                </div>
+                            </div>
+                               <div class="nb-root mb20">
+                                <div class="nb-root-image">
+                                    <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                </div>
+                                <h3><a href="#">Giải pháp nâng cao năng lực nghề nghiệp đội ngũ nhà giáo</a></h3>
+                                <div class="nb-root-date">
+                                    <span><i class="fa fa-clock-o"></i>12/02/2017</span>
+                                </div>
+                                <div class="nb-root-text">
+                                    GD&amp;TĐ - TS. Trần Kiêm Minh và PGS.TS. Nguyễn Thành Nhân (Trường ĐH Sư phạm, Đại học Huế) tổng hợp <a href="#" class="read-more">Xem thêm</a>
+                                </div>
+                            </div>
+                               <div class="paginnation-style">
+                                <ul>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">..</a></li>
+                                    <li><a href="#">99</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>LIÊN KẾT BANNER</h2>
+                        </div>
+                        <div class="single-box-content">
+                            <div class="owl-carousel owl-theme">
+                                <div class="bn-item"> <a href="#" class="icon-ani"><img src="images/tmp/banner-link-1.png" alt=""></a> </div>
+                                <div class="bn-item"> <a href="#" class="icon-ani"><img src="images/tmp/banner-link-2.png" alt=""></a> </div>
+                                <div class="bn-item"> <a href="#" class="icon-ani"><img src="images/tmp/banner-link-3.png" alt=""></a> </div>
+                                <div class="bn-item"> <a href="#" class="icon-ani"><img src="images/tmp/banner-link-1.png" alt=""></a> </div>
+                                <div class="bn-item"> <a href="#" class="icon-ani"><img src="images/tmp/banner-link-2.png" alt=""></a> </div>
+                                <div class="bn-item"> <a href="#" class="icon-ani"><img src="images/tmp/banner-link-3.png" alt=""></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 right-fx">
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>Tài nguyên download</h2>
+                        </div>
+                        <div class="single-box-content ">
+                            <ul class="treeview-download">
+                                <li><a href="tai-lieu.html">Tài liệu ôn thi HKI</a>
+                                    <ul>
+                                        <li><a href="#">Lớp 10</a></li>
+                                        <li><a href="#">Lớp 11</a></li>
+                                        <li><a href="#">Lớp 12</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Bài giảng</a>
+                                </li>
+                                <li><a href="#">Bài tập ôm thi</a></li>
+                                <li><a href="tai-lieu.html">Bài giảng ôn thi</a>
+                                    <ul>
+                                        <li><a href="#">Lớp 10</a>
+                                            <ul>
+                                                <li><a href="#">Môn Toán</a></li>
+                                                <li><a href="#">Môn Lý</a></li>
+                                                <li><a href="#">Môn Hóa</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Lớp 11</a></li>
+                                        <li><a href="#">Lớp 12</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Bài tập ôm thi</a></li>
+                            </ul>
+                            <script type="text/javascript" src="js/treeview.js"></script>
+                        </div>
+                    </div>
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>TIN MỚI NHẤT</h2>
+                        </div>
+                        <div class="single-box-content">
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                            <div class="single-item ">
+                                <h3><a href="#" class="single-item-link"><i class="fa fa-angle-right"></i>Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>THƯ VIỆN ẢNH</h2>
+                        </div>
+                        <div class="single-box-content ">
+                            <div id="rg-gallery" class="rg-gallery">
+                                <div class="rg-thumbs">
+                                    <!-- Elastislide Carousel Thumbnail Viewer -->
+                                    <div class="es-carousel-wrapper">
+                                        <div class="es-nav">
+                                            <span class="es-nav-prev">Previous</span>
+                                            <span class="es-nav-next">Next</span>
+                                        </div>
+                                        <div class="es-carousel">
+                                            <ul>
+                                                <li><a href="#"><img src="images/tmp/thumbs/1.jpg" data-large="images/tmp/1.jpg" alt="image01"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/2.jpg" data-large="images/tmp/2.jpg" alt="image02"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/3.jpg" data-large="images/tmp/3.jpg" alt="image03" /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/4.jpg" data-large="images/tmp/4.jpg" alt="image04" /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/5.jpg" data-large="images/tmp/5.jpg" alt="image05"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/6.jpg" data-large="images/tmp/6.jpg" alt="image05"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/7.jpg" data-large="images/tmp/7.jpg" alt="image05"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/8.jpg" data-large="images/tmp/8.jpg" alt="image05"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/9.jpg" data-large="images/tmp/9.jpg" alt="image05"  /></a></li>
+                                                <li><a href="#"><img src="images/tmp/thumbs/10.jpg" data-large="images/tmp/10.jpg" alt="image05"  /></a></li>
+                                        </div>
+                                    </div>
+                                    <!-- End Elastislide Carousel Thumbnail Viewer -->
+                                </div>
+                                <!-- rg-thumbs -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-box">
+                        <div class="single-box-title">
+                            <h2>THỐNG KÊ TRUY CẬP</h2>
+                        </div>
+                        <div class="single-box-content ">
+                            <div class="visitor-box">
+                                <span class="online">Đang online: <i>132</i></span>
+                                <span class="day">Hôm nay: <i>1652</i></span>
+                                <span class="month">Tháng này: <i>323231</i></span>
+                                <span class="sum-visitor">Tổng truy cập: <i>1231231</i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="topfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer">
+                            <h2>THÔNG TIN LIÊN HỆ</h2>
+                            <div class="single-footer-text">
+                                <p>Địa chỉ: Số 21 Lê Trung Nghĩa, P. 12, Quận Tân Bình, Tp.Hồ Chí Minh</p>
+                                <p>Email: sales@ascvn.com.vn</p>
+                                <p>Điện thoại: (028) 66.797.357</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer">
+                            <h2>NHÀ TRƯỜNG</h2>
+                            <div class="single-footer-text">
+                                <p><a href="">Giới thiệu</a></p>
+                                <p><a href="">Cơ cấu tổ chức</a></p>
+                                <p><a href="">Thành tích học sinh</a></p>
+                                <p><a href="">Thành tích nhà trường</a></p>
+                                <p><a href="">Thành tích CBGNCNV</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer">
+                            <h2>TIN TỨC</h2>
+                            <div class="single-footer-text">
+                                <p><a href="">Tin nhà trường</a></p>
+                                <p><a href="">Hoạt động - Sự kiện</a></p>
+                                <p><a href="">Đào tạo</a></p>
+                                <p><a href="">Tuyển sinh</a></p>
+                                <p><a href="">Lịch công tác</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer">
+                            <h2>GIÁO VIÊN & HỌC SINH</h2>
+                            <div class="single-footer-text">
+                                <p><a href="">Tin nhà trường</a></p>
+                                <p><a href="">Hoạt động - Sự kiện</a></p>
+                                <p><a href="">Đào tạo</a></p>
+                                <p><a href="">Tuyển sinh</a></p>
+                                <p><a href="">Lịch công tác</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"><span>© COPYRIGHT TRƯỜNG THPT NGUYỄN THỊ MINH KHAI</span></div>
+                    <div class="col-md-6">
+                        <div class="designby">
+                            <span>THIẾT KẾ & PHÁT TRIỂN BỞI ASC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/config.js"></script>
+</body>
+
+</html>

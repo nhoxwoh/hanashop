@@ -1,0 +1,129 @@
+@-webkit-keyframes searchZoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes searchZoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(1.5, 1.5, 1.5);
+        transform: scale3d(1.5, 1.5, 1.5);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+.search-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    display: inline-block;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    width: 30px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.header-search-wrap {
+    position: absolute;
+    right: 15%;
+    top: 55px;
+    z-index: 9999;
+    .search-close-icon {
+        color: #fff;
+        display: none;
+        position: relative;
+        z-index: 9999;
+        font-size: 1.5rem;
+    }
+    .top-search-input-wrap {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        display: none;
+        -webkit-animation: searchZoomIn .4s;
+        animation: searchZoomIn .4s;
+        .top-search-overlay {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.85);
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+
+
+            form {
+                width: 100%
+            }
+        }
+    }
+}
+
+.search-wrap {
+    width: 100%;
+    .school-top-search {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        input {
+            background: transparent;
+            border-radius: 3px;
+            border-width: 0;
+            height: 60px;
+            box-shadow: none;
+            padding: 10px 20px;
+            width: 100%;
+            border: 1.5px solid #fff;
+            color: #fff;
+            font-size: 16px;
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        .sp_search_input {
+            &:after {
+                content: "\f002";
+                font-size: 20px;
+                color: rgba(255, 255, 255, 0.9);
+                font-family: FontAwesome;
+                position: absolute;
+                top: 0;
+                right: 15px;
+                pointer-events: none;
+                line-height: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .search-wrap {
+
+        .school-top-search {
+
+            width: 80%;
+        }
+    }
+}

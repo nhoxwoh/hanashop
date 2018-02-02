@@ -1,0 +1,68 @@
+.notification-area {
+    .single-notification {
+        overflow: hidden;
+        height: 40px;
+        margin-bottom: 20px;
+        clear: both;
+        position: relative;
+        .single-notification-title {
+            overflow: hidden;
+            position: relative;
+            margin-right: 142px;
+            h2 {
+                float: left;
+                background: #cd2122;
+                color: #ffffff;
+                position: relative;
+                z-index: 2;
+                font-weight: 500;
+                text-align: center;
+                font-size: 1.25rem;
+                height: 40px;
+                line-height: 40px;
+                width: 150px;
+            }
+            .single-notification-list {
+                background: #fff;
+                height: 40px;
+                line-height: 40px;
+                padding: 0;
+                list-style: none;
+                border: 1px solid #dfdfdf;
+                padding: 0 2px 0 10px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                ul {
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        float: left;
+                        margin-right: 30px;
+                        i {
+                            color: #cd2122;
+                            float: left;
+                            margin-right: 5px;
+                            margin-top: 11px
+                        }
+                        a {}
+                    }
+                }
+            }
+        }
+
+        .single-notification-date {
+            float: left;
+            height: 40px;
+            line-height: 41px;
+            text-align: center;
+            background: #525252;
+            color: #fff;
+
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 142px;
+        }
+    }
+}

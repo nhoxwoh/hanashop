@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sở GD &amp; ĐT HCM - Cổng th&#244;ng tin điện tử</title>
+    <link href="/hcm/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="css/styleold.css" rel="Stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/fix.css">
+    <script src="js/main.js" type="text/javascript"></script>
+    <style>
+    .help-tailieu {
+        padding-left: 10px;
+    }
+
+    .square {
+        background-color: #003F59;
+        border-radius: 2px;
+        display: block;
+        float: left;
+        height: 5px;
+        margin: 5px;
+        width: 5px;
+    }
+    </style>
+    <script type="text/javascript">
+    kendo.culture("vi-VN");
+    gOptions.UrlTimKiemTheTaiSan = '/hcm/TheTaiSan/TimKiemTheTaiSan';
+    gOptions.UrlTimKiemNhanSu = '/hcm/TraCuuNhanSu/TimKiemNhanSu';
+    gOptions.UrlTimKiemHocSinh = '/hcm/HoSoHocSinh/TimKiemHocSinh';
+    gOptions.UrlThayDoiMatKhau = '/hcm/Account/Popupchagepassword';
+    gOptions.UrlCauHinhHeThong = '/hcm/CauHinhHeThong/EditPopup';
+    gOptions.UrlTieuChuanMamNon = '/hcm/TieuChuanMamNon';
+    gOptions.UrlTieuChuanTieuHoc = '/hcm/TieuChuanTieuHoc';
+    gOptions.UrlTieuChuanTrungHoc = '/hcm/TieuChuanTrungHoc';
+    gOptions.UrlCoSoVatChatKhac = '/hcm/CoSoVatChatKhac';
+    gOptions.UrlCoSoVatChatKhacPhongGDDT = '/hcm/CoSoVatChatKhac/CoSoVCKhacPhongGDDT';
+    gOptions.UrlCoSoVatChatKhacSoGiaoDuc = '/hcm/CoSoVatChatKhac/CoSoVCKhacSoGiaoDuc';
+    gOptions.UrlCoSoVatChatKhacVaThuVien = '/hcm/CoSoVatChatKhac/ThongTinCoSoVatChatThuVien';
+    gOptions.UrlThongTinThietBiTruongHoc = '/hcm/CoSoVatChat/ThongTinThietBiTruongHoc';
+    gOptions.UrlQuyetDinhKyLuat = '/hcm/QuyetDinhKyLuat';
+    gOptions.UrlQuyetDinhDieuDong = '/hcm/QuyetDinhDieuDong';
+    gOptions.UrlQuyetDinhNangLuong = '/hcm/QuyetDinh/QuyetDinhNangLuong';
+    gOptions.UrlQuyetDinhChamDutHopDong = '/hcm/QuyetDinhChamDutHopDong';
+    gOptions.UrlQuyetDinhThamNienNhaGiao = '/hcm/QuyetDinhThamNienNhaGiao';
+    gOptions.UrlQuyetDinhNangThamNienNhaGiao = '/hcm/QuyetDinhNangThamNienNhaGiao';
+    gOptions.UrlQuyetDinhKhenThuong = '/hcm/QuyetDinhKhenThuong';
+    gOptions.UrlQuyetDinhNghiKhongLuong = '/hcm/QuyetDinhNghiKhongLuong';
+    gOptions.UrlQuyetDinhTroLaiCongTac = '/hcm/QuyetDinhTroLaiCongTac';
+    gOptions.UrlQuyetDinhNghiHuu = '/hcm/QuyetDinhNghiHuu';
+    gOptions.UrlQuyetDinhThoiGiuChuc = '/hcm/QuyetDinhThoiGiuChuc';
+    gOptions.UrlQuyetDinhBoNhiem = '/hcm/QuyetDinh/QuyetDinhBoNhiem';
+    gOptions.UrlQuyetDinhCuDiHoc = '/hcm/QuyetDinhCuDiHoc';
+    gOptions.UrlQuyetDinhBoNhiemToBoMon = '/hcm/QuyetDinhBoNhiemToBoMon';
+    gOptions.UrlKyLaiHopDong = '/hcm/QuyetDinh/KyLaiHopDong';
+    gOptions.UrlDanhMucMonHoc = '/hcm/Common/DanhSachMonHoc';
+    gOptions.UrlDonTuiDanhPhach = '/hcm/TuyenSinh/DonTuiDanhPhach';
+    gOptions.UrlImportHocSinhMamNon = '/hcm/HoSoHocSinh/ImportHocSinhMamNon';
+    gOptions.UrlImportHocSinhTieuHoc = '/hcm/HoSoHocSinh/ImportHocSinhTieuHoc';
+    gOptions.UrlGetIDNienHocHienTai = '/hcm/Common/GetIDNienHocGanNhat';
+    gOptions.UrlCheckDotTuyenSinhIsDaThi = '/hcm/Common/CheckDotTuyenSinhIsDaThi';
+    gOptions.GridPopupSortUrl = "/hcm/Common/PopupSort";
+    gOptions.CheckKhoaBangLuong = "/hcm/NhanSu/CheckKhoaBangLuong";
+    gOptions.UrlDanhMucMucDoDoKho = "/hcm/ThiTrucTuyen/DanhMucMucDoDoKho";
+    gOptions.UrlXemChiTietCauHoi = '/hcm/ThiTrucTuyen/ViewCauHoi';
+    gOptions.UrlXemBoDeThi = '/hcm/ThiTrucTuyen/XemBoDeThi';
+    gOptions.UrlTimKiemTruong = '/hcm/Common/TimKiemTruong';
+    gOptions.UrlThanhToanHocPhi = '/hcm/ThanhToan/ThanhToanHocPhi';
+    gOptions.UrlHuyPhieuThu = '/hcm/ThanhToan/HuyPhieuThu';
+    gOptions.UrlSoGiaoDuc = '/hcm/DanhMucSoGiaoDuc/EditSoGiaoDuc';
+    gOptions.UrlPopupTimKiemGiaoVienHopDong = '/hcm/TraCuuNhanSu/TimKiemGiaoVienHopDong';
+    gOptions.UrlPhieuChiMienGiam = '/hcm/ThanhToan/PhieuChiMienGiam';
+    gOptions.UrlTrichXuatBaoCaoTheoCV = '/hcm/ThongKeGiaoDuc/TrichXuatBaoCaoCV';
+    gOptions.UrlGopTruong = '/hcm/HeThong/GopTruong';
+    gOptions.UrlCauHinhMayIn = '/hcm/HeThong/CauHinhMayIn';
+    gOptions.UrlDanhSachPhongThiTruong = '/hcm/KhaoThi/DanhSachPhongThiTruong';
+
+    // đơn vị
+    gOptions.LoaiDonVi = { SoGiaoDuc: 1, PhongGDDT: 2, Truong: 3 };
+    </script>
+</head>
+
+<body data-default-error-msg="Đ&#227; c&#243; lỗi xảy ra! Xin thử lại sau." data-update-success-msg="Cập nhật th&#224;nh c&#244;ng!" data-has-changes-msg="C&#243; dữ liệu thay đổi, bạn c&#243; muốn lưu kh&#244;ng?" data-no-change-msg="Kh&#244;ng c&#243; dữ liệu thay đổi" data-no-data-to-display-msg="Kh&#244;ng c&#243; dữ liệu để hiển thị" data-accept-txt="C&#243;" data-not-accept-txt="Kh&#244;ng" data-cancel-txt="Hủy" data-not-correct-filetype-word-excel-txt="Chỉ upload c&#225;c file c&#243; định dạng .xls, .doc" data-not-correct-filetype-txt="File kh&#244;ng đ&#250;ng định dạng" data-select-one="Nhiều d&#242;ng dữ liệu đ&#227; được chọn. Bạn chỉ được chọn một d&#242;ng">
+    <!--[if lt IE 8]>
+         <script>
+         if(!window.externalHost)
+         {
+             window.location.href = '/hcm/Error/ErrorIE?backurl=%2Fhcm%2F';
+         }
+         </script>
+     <![endif]-->
+    <div class="pmt-page min-width">
+        <div id="top">
+            <div id="page-header">
+                <div id="logo">
+                    <div class="title-color">
+                        <a href="/hcm/"><img src="/hcm/Modules/Current/Logo.png" style="vertical-align: middle" height="50" alt="logo" /></a>
+                        <a>SỞ GI&#193;O DỤC V&#192; Đ&#192;O TẠO HCM</a>
+                    </div>
+                </div>
+                <div class="pmt-user-preferences">
+                    <div class="pmt-user-img">
+                        <a id="linkUserInfo" href="#">
+                        <img src="/hcm/Content/images/avatar.png" />
+                        <span>
+Quản trị                        </span>
+                    </a>
+                    </div>
+                    <div style="float:right; margin-top: 11px; margin-right: 20px;">
+                        <button class="k-button" data-button-type="button" id="btn_Xoa_Cache" name="btn_Xoa_Cache" title="Xóa bộ nhớ đệm">
+                            <span class="p-i-reset"></span>
+                        </button>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div id="navigation">
+                <div id="menu-tab">
+                    <!-- defining main tabs elements -->
+                    <div id="tabs-container">
+                        <ul class="tabs">
+                            <li class='image'><a class='homepage' href='/hcm/'><img src='/hcm/Content/images/icons/home.png'/></a>
+                                <li><a href='javascript:'>Hệ thống</a></li>
+                                <li><a href='javascript:'>Nhân sự</a></li>
+                                <li><a href='javascript:'>Giáo dục</a></li>
+                                <li><a href='javascript:'>GD Mầm non</a></li>
+                                <li><a href='javascript:'>GD Tiểu học</a></li>
+                                <li><a href='javascript:'>GD Trung học</a></li>
+                                <li><a href='javascript:'>GDTX</a></li>
+                                <li><a href='javascript:'>Tài sản</a></li>
+                                <li><a href='javascript:'>Thanh Tra & Kiểm tra</a></li>
+                                <li><a href='javascript:'>Thi online</a></li>
+                                <li><a href='javascript:'>Danh mục</a></li>
+                                <li><a href='javascript:'>Hướng dẫn</a></li>
+                        </ul>
+                    </div>
+                    <!-- defining top menu -->
+                    <div id="nav-container">
+                        <ul class="nav"></ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='/hcm/NhomNguoiDung'>Quản lý nhóm người dùng</a></li>
+                            <li><a href='/hcm/DanhSachNguoiDungNew'>Quản lý người dùng</a></li>
+                            <li><a href='/hcm/LichSuDangNhap'>Lịch sử đăng nhập</a></li>
+                            <li><a href='/hcm/BanDoTruongHoc'>Bản đồ trường học</a></li>
+                            <li><a href='/hcm/HeThong/QuanLyThongBao'>Quản lý thông báo</a></li>
+                            <li><a href='/hcm/HeThong/BangXacNhanCapNhatDuLieu'>Bảng xác nhận cập nhật dữ liệu</a></li>
+                            <li><a href='/hcm/HeThong/ThongKeCapNhatDuLieu'>Thống kê cập nhật dữ liệu</a></li>
+                            <li><a href='/hcm/HeThong/ChuyenQuyen'>Chuyển quyền</a></li>
+                            <li><a href='javascript:' onClick='showPopupGopTruong()'>Gộp trường</a></li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Thông tin nhân sự</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/SoDoNhanSu'>Sơ đồ nhân sự</a></li>
+                                    <li><a href='/hcm/TraCuuNhanSu'>Danh sách nhân sự</a></li>
+                                    <li><a href='/hcm/DanhSachNhanSuTuyenDung'>Nhập hồ sơ mới</a></li>
+                                    <li><a href='javascript:' onClick='showPopupKyLaiHopDong()'>Ký lại hợp đồng</a></li>
+                                    <li><a href='/hcm/NhanSu/NhanSuNghiViec'>Nhân sự nghỉ việc</a></li>
+                                    <li><a href='/hcm/GiangDay/GiaoVienHopDong'>Giáo viên hợp đồng</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Đơn vị</a>
+                                <ul class="sub">
+                                    <li><a href='javascript:' onClick='showPopupSoGiaoDuc()'>Sở giáo dục</a></li>
+                                    <li><a href='/hcm/DanhMucPhongGDDT'>Phòng giáo dục</a></li>
+                                    <li><a href='/hcm/DanhMucTruong'>Trường</a></li>
+                                    <li><a href='/hcm/DiemTruong'>Điểm trường</a></li>
+                                    <li><a href='/hcm/DanhSachPhongBanSo'>Phòng ban sở</a></li>
+                                    <li><a href='/hcm/DanhSachPhongBanPhongGDDT'>Phòng ban phòng GD & ĐT</a></li>
+                                    <li><a href='/hcm/DanhSachPhongBanTruong'>Phòng ban trường</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Quyết định</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/QuyetDinh/QuanLyQuyetDinh'>Quản lý quyết định</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhBoNhiem()'>Quyết định bổ nhiệm</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhBoNhiemToBoMon()'>Quyết định bổ nhiệm tổ trưởng/khối trưởng</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhThoiGiuChuc()'>Quyết định thôi giữ chức</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhNangLuong()'>Quyết định nâng lương</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhDieuDong()'>Quyết định điều động</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhThamNienNhaGiao()'>Quyết định thâm niên nhà giáo</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhNangThamNienNhaGiao()'>Quyết định nâng thâm niên nhà giáo</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhChamDutHopDong()'>Quyết định chấm dứt hợp đồng</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhNghiHuu()'>Quyết định nghỉ hưu</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhNghiKhongLuong()'>Quyết định nghỉ không lương</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhTroLaiCongTac()'>Quyết định trở lại công tác</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhKhenThuong()'>Quyết định khen thưởng</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhKyLuat()'>Quyết định kỷ luật</a></li>
+                                    <li><a href='javascript:' onClick='showPopupQuyetDinhCuDiHoc()'>Quyết định cử CCVC đi học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thống kê</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/NhanSu/ThongKeSoLuongNhanSuDonVi'>Thống kê số lượng nhân sự đơn vị</a></li>
+                                    <li><a href='/hcm/NhanSu/ThongKeNhanSuDonVi'>Thống kê nhân sự đơn vị</a></li>
+                                    <li><a href='/hcm/NhanSu/ThongKeSoLuongNhanSuPhongBan'>Thống kê số lượng nhân sự phòng ban</a></li>
+                                    <li><a href='/hcm/ThongKeNhanSu/TrinhDoNhanSu'>Thống kê trình độ nhân sự</a></li>
+                                    <li><a href='/hcm/ThongKeNhanSu/TongHopDuKienNhanSuVeHuu'>Tổng hợp dự kiến nhân sự về hưu</a></li>
+                                    <li><a href='/hcm/ThongKeNhanSu/ChiTietDuKienNhanSuVeHuu'>Chi tiết dự kiến nhân sự về hưu</a></li>
+                                    <li><a href='/hcm/ThongKeNhanSu/TongHopDuKienTangLuong'>Tổng hợp dự kiến tăng lương</a></li>
+                                    <li><a href='/hcm/ThongKeNhanSu/BaoCaoTrinhDoTheoPhanCongNhiemVu'>Báo cáo trình độ theo phân công nhiệm vụ</a></li>
+                                    <li><a href='/hcm/NhanSu/ThongKeSoLuongNhanSuTheoLoaiCongChuc'>Thống kê số lượng nhân sự theo loại công chức</a></li>
+                                    <li><a href='/hcm/NhanSu/ThongKeCanBoThietBiPhongHocBoMon'>Thống kê cán bộ thiết bị - phòng học bộ môn</a></li>
+                                    <li><a href='/hcm/ThongKeNhanSu/ThongKeSoLuongNhanSuDaNghiHuu'>Thống kê số lượng nhân sự đã nghĩ hưu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tài chính</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/TaiChinh/KinhPhi'>Kinh phí</a></li>
+                                    <li><a href='/hcm/TaiChinh/KhoanChi'>Khoản chi</a></li>
+                                    <li><a href='/hcm/TaiChinh/ThongKe'>Thống kê kinh phí - khoản chi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Giảng dạy</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/KeHoachDayHoc/KeHoachDayHoc'>Kế hoạch dạy học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc22/KeHoachDayHoc_22'>Kế hoạch dạy học (TT22)</a></li>
+                                    <li><a href='/hcm/KeHoachDayHocChiTiet'>Kế hoạch dạy học chi tiết</a></li>
+                                    <li><a href='/hcm/KeHoachDayHocChiTiet22/Index_22'>Kế hoạch dạy học chi tiết (TT22)</a></li>
+                                    <li><a href='/hcm/KeHoachDayHocLopHoc'>Kế hoạch dạy học - lớp học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHocLopHoc22/Index_22'>Kế hoạch dạy học - lớp học (TT22)</a></li>
+                                    <li><a href='/hcm/MamNon/ChuDeNienHoc'>Chủ đề năm học</a></li>
+                                    <li><a href='/hcm/GiangDay/KhoaDiemTrungHoc'>Khóa điểm trung học</a></li>
+                                    <li><a href='/hcm/GiangDay/KhoaNhanXetDanhGiaTieuHoc'>Khóa nhận xét - đánh giá tiểu học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Học sinh</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/HoSoKetQuaHocTap'>Hồ sơ kết quả học tập</a></li>
+                                    <li><a href='/hcm/GiangDay/CapNhatTrangThaiHocSinh'>Cập nhật trạng thái học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/XoaHocSinh'>Xóa học sinh</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/BaoCaoTongHopSoLuongHocSinh'>Báo cáo tổng hợp số lượng học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeSiSoLopHoc'>Thống kê sĩ số lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeHocSinhThoiHoc'>Thống kê học sinh thôi học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeHocSinhKhongDenTruong'>Thống kê học sinh không đến trường</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/ChiTieuKeHoachNganhGDDT'>Chỉ tiêu kế hoạch ngành giáo dục và đào tạo</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/ThongKeDiemTruong'>Thống kê điểm trường</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhSachTruongDatChuanQuocGia'>Danh sách trường đạt chuẩn quốc gia</a></li>
+                                    <li><a href='/hcm/GiangDay/BaoCaoSoLuongMayTinhPhucVuDayHoc'>Báo cáo số lượng máy tính phục vụ dạy học</a></li>
+                                    <li><a href='/hcm/MamNon/ThongKeTruongMamNonChuaTheoDoiNhatKySucKhoe'>Thống kê trường mầm non chưa theo dõi/nhật ký sức khỏe</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/XetLenLopTam'>Thống kê xét lên lớp tạm</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/TruongChuaTheoDoiSucKhoeMN'>Thống kê trường MN chưa nhập theo dõi sức khỏe</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo TH</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThongKeGiaoDuc/ThongKeTruongTieuHocChuaDanhGiaKetQuaHocTap'>Thống kê trường tiểu học chưa đánh giá kết quả học tập</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDanhGiaMonHocVaHoatDongGiaoDucTieuHoc'>Thống kê đánh giá môn học & hoạt động GD Tiểu học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDanhGiaPhamChatVaNangLucTieuHoc'> Thống kê đánh giá phẩm chất & năng lực tiểu học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo PT</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThongKeGiaoDuc/ThongKeTruongChuaNhapDiem'>Thống kê trường trung học chưa nhập điểm</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/LopHocChuaNhapDiem'>Thống kê lớp học chưa nhập điểm</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/TruongDanhGiaHocTap'>Thống kê trường đánh giá học tập</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/ThongKeKetQuaKiemTraHocKyKhoiLop'>Thống kê kết quả kiểm tra học kỳ khối lớp</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/ThongKeKetQuaKiemTraHocKyMonHoc'>Thống kê kết quả kiểm tra học kỳ môn học</a></li>
+                                    <li><a href='/hcm/ThongKeGiaoDuc/KetQuaXepLoaiHocLucHanhKiem'>Thống kê kết quả xếp loại hạnh kiểm, học lực</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='/hcm/GiangDay/UocLuongQuyHoach'>Ước lượng quy hoạch</a></li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Giảng dạy</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/LopHocNienHoc'>Mở lớp đầu năm</a></li>
+                                    <li><a href='/hcm/MamNon/KhoiLopMonHoc'>Khối lớp - Lĩnh vực phát triển - Môn học</a></li>
+                                    <li><a href='/hcm/MamNon/ChuDeNienHocTruong'>Chủ đề năm học - trường</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Lớp học</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/DanhSachLopHoc'>Danh mục lớp học – Nhóm trẻ</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeSiSoLopHocMamNon'>Thống kê sĩ số lớp học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Học sinh</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/DanhSachHocSinh'>Hồ sơ học sinh mầm non</a></li>
+                                    <li><a href='/hcm/MamNon/DanhSachLopHocHocSinh'>Danh sách lớp học học sinh</a></li>
+                                    <li><a href='/hcm/MamNon/XepLop'>Xếp lớp mầm non</a></li>
+                                    <li><a href='/hcm/MamNon/XetLenLop'>Xét lên lớp</a></li>
+                                    <li><a href='javascript:' onClick='showPopupImportHocSinh("/hcm/HoSoHocSinh/ImportHocSinhMamNon")'>Import học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ChuyenLopMamNon'>Chuyển lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/XacNhanChuyenTruongMamNon'>Xác nhận chuyển trường</a></li>
+                                    <li><a href='/hcm/ChuyenTruong/MamNon'>Tiếp nhận học sinh chuyển trường</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Sức khỏe</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/TheoDoiSucKhoe'>Theo dõi sức khỏe</a></li>
+                                    <li><a href='/hcm/MamNon/NhatKySucKhoe'>Nhật ký sức khỏe</a></li>
+                                    <li><a href='/hcm/DanhMucMamNon/BangTieuChuanChieuCao'>Bảng tiêu chuẩn chiều cao</a></li>
+                                    <li><a href='/hcm/DanhMucMamNon/BangTieuChuanCanNang'>Bảng tiêu chuẩn cân nặng</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/BaoCaoThongKeGiaoDucMamNon'>Thống kê giáo dục mầm non</a></li>
+                                    <li><a href='/hcm/MamNon/TongQuanPhatTrienGiaoDucMamNon'>Tổng quan phát triển giáo dục mầm non</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoMuaSamDDDCTBDHLopMG5Tuoi'>Mua sắm đồ dùng đồ chơi, thiết bị dạy học cho lớp MG 5 tuổi</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoThongTinVeToChucLopMauGiaoGhep'>Thông tin về tổ chức lớp mẫu giáo ghép</a></li>
+                                    <li><a href='/hcm/MamNon/ThongKeSoLieuTruongLop'>Thống kê số liệu trường lớp</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoSoLieuVeTruongNhomLop'>Bảng số liệu về trường, nhóm, lớp</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoSoLieuVeThucHienChuongTrinh'>Bảng số liệu về thực hiện chương trình</a></li>
+                                    <li><a href='/hcm/MamNon/BangSoLieuVeDoiNguQuanLy'>Bảng số liệu về đội ngũ cán bộ quản lý</a></li>
+                                    <li><a href='/hcm/MamNon/BangSoLieuGiaoVienMauGiao'>Bảng số liệu về giáo viên mẫu giáo</a></li>
+                                    <li><a href='/hcm/MamNon/BangSoLieuGiaoVienNhaTreNhanVien'>Bảng số liệu giáo viên nhà trẻ nhân viên</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoBangSoLieuVeSoLuongTre'>Bảng số liệu về số lượng trẻ</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoBangSoLieuVeChamSocNuoiDuongTre'>Bảng báo cáo số liệu về chăm sóc nuôi dưỡng trẻ</a></li>
+                                    <li><a href='/hcm/MamNon/BangSoLieuPhongHocTruongDatChuan'>Bảng số liệu phòng học - trường đạt chuẩn quốc gia</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoBangSoLieuSanChoiNgoaiTroiNhaBep'>Bảng số liệu sân chơi ngoài trời - nhà bếp</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoBangSoLieuNhaVeSinhThietBiUngDungCNTT'>Bảng số liệu nhà vệ sinh - thiết bị - ứng dụng CNTT</a></li>
+                                    <li><a href='/hcm/GiangDay/BaoCaoTongHopHocSinhMamNon'>Báo cáo tổng hợp học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/BaoCaoSiSoLopHocMamNon'>Thống kê sĩ số lớp học</a></li>
+                                    <li><a href='/hcm/MamNon/BaoCaoHoTroAnTrua'>Báo cáo hỗ trợ ăn trưa</a></li>
+                                    <li><a href='/hcm/MamNon/ThongKeThucHienKiemDinhChatLuongGiaoDucTruongMamNon'>Thống kê thực hiện kiểm định chất lượng giáo dục trường mầm non</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thông tin khác</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/DanhSachTruong'>Danh sách trường - Nhà trẻ</a></li>
+                                    <li><a href='/hcm/MamNon/MuaSamDDDCTBDHLop5Tuoi'>Mua sắm ĐD - ĐC - TTBDH lớp MG 5 tuổi</a></li>
+                                    <li><a href='/hcm/MamNon/KetQuaKiemDinhCLGDTMN'>Kết quả kiểm định chất lượng giáo dục trường mầm non</a></li>
+                                    <li><a href='/hcm/Common/DanhSachBaoCaoDaLuu'>Danh sách báo cáo đã lưu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Trẻ</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/MamNon/DanhSachTre'>Danh sách trẻ</a></li>
+                                    <li><a href='javascript:' onClick='$(this).showPopupView("popupImportHoSoTre", "/hcm/MamNon/ImportHoSoTre")'>Import hồ sơ trẻ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thực đơn</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucMamNon/ThucDon'>Danh mục thực đơn</a></li>
+                                    <li><a href='/hcm/DanhMucMamNon/BuaAn'>Danh mục bữa ăn</a></li>
+                                    <li><a href='/hcm/DanhMucMamNon/MonAn'>Danh mục món ăn</a></li>
+                                    <li><a href='/hcm/MamNon/ThucDonMamNon'>Thực đơn mầm non</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Giảng dạy</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/KeHoachLopHocNienHoc/TieuHoc'>Kế hoạch lớp học năm học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc/PhanKeHoachDayHocLopHocTieuHoc'>Phân kế hoạch dạy học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc22/PhanKeHoachDayHocLopHocTieuHoc_22'>Phân kế hoạch dạy học (TT22)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Lớp học</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhSachLophoc/TieuHoc'>Danh mục lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeSiSoLopHocTieuHoc'>Thống kê sĩ số lớp học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Học sinh</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/HoSoHocSinh/TieuHoc'>Hồ sơ học sinh</a></li>
+                                    <li><a href='/hcm/DanhSachLopHocHocSinh/TieuHoc'>Danh sách lớp học học sinh</a></li>
+                                    <li><a href='javascript:' onClick='showPopupImportHocSinh("/hcm/HoSoHocSinh/ImportHocSinhTieuHoc")'>Import Học sinh</a></li>
+                                    <li><a href='/hcm/DiemDanh/TieuHoc'>Điểm danh</a></li>
+                                    <li><a href='/hcm/DangKyVaoLop1_6_10/IndexMode1'>Ghi danh lớp 1</a></li>
+                                    <li><a href='/hcm/XepLop1_6_10/Index1'>Xếp học sinh vào lớp 1</a></li>
+                                    <li><a href='/hcm/GiangDay/ChuyenLopTieuHoc'>Chuyển lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/QuanLyKyLuatTieuHoc'>Quản lý kỷ luật</a></li>
+                                    <li><a href='/hcm/GiangDay/XacNhanChuyenTruongTieuHoc'>Xác nhận chuyển trường</a></li>
+                                    <li><a href='/hcm/ChuyenTruong/TieuHoc'>Tiếp nhận học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/HocSinhThoiHoc/TieuHoc'>Danh sách học sinh thôi học</a></li>
+                                    <li><a href='/hcm/GiangDay/MienMonHocTieuHoc'>Danh sách học sinh miễn môn học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Nhận xét - Đánh giá</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/NhanXetThuongXuyenGVBM'>Nhận xét thường xuyên GVBM</a></li>
+                                    <li><a href='/hcm/GiangDay/NhanXetThuongXuyenGVCN'>Nhận xét thường xuyên GVCN</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhGiaMonHocVaHoatDongGiaoDucHK1'>Đánh giá môn học HK1</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhGiaNangLucHK1'>Đánh giá năng lực HK1</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhGiaPhamChatHK1'>Đánh giá phẩm chất HK1</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhGiaMonHocVaHoatDongGiaoDucCN'>Đánh giá môn học cuối năm</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhGiaNangLucCN'>Đánh giá năng lực cuối năm</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhGiaPhamChatCN'>Đánh giá phẩm chất cuối năm</a></li>
+                                    <li><a href='/hcm/GiangDay/BangTongHopNhanXetThuongXuyenGVCN'>Bảng tổng hợp nhận xét thường xuyên GVCN</a></li>
+                                    <li><a href='/hcm/GiangDay/BangTongHopNhanXetThuongXuyenGVBM'>Bảng tổng hợp nhận xét thường xuyên GVBM</a></li>
+                                    <li><a href='/hcm/GiangDay/BangTongHopDanhGiaHocSinh'>Bảng tổng hợp đánh giá học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/XetHoanThanhChuongTrinhLopHoc'>Xét hoàn thành chương trình lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/DuyetHoanThanhChuongTrinhLopHoc'>Duyệt hoàn thành chương trình lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/SucKhoeTieuHoc'>Sức khỏe</a></li>
+                                    <li><a href='/hcm/GiangDay/KhenThuongTieuHoc'>Khen thưởng/Thành tích</a></li>
+                                    <li><a href='/hcm/GiangDay/XetHoanThanhCTTieuHoc'>Xét hoàn thành CT tiểu học</a></li>
+                                    <li><a href='/hcm/GiangDay/HocBaDienTu'>Học bạ điện tử</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Nhận xét - đánh giá (TT22)</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay22/NhanXetThuongXuyenGVBM_22'>Nhận xét thường xuyên GVBM</a></li>
+                                    <li><a href='/hcm/GiangDay22/NhanXetThuongXuyenGVCN_22'>Nhận xét thường xuyên GVCN</a></li>
+                                    <li><a href='/hcm/GiangDay22/DanhGiaMonHocVaHoatDongGiaoDucGiuaHK1_TT22'>Đánh giá môn học giữa HK 1</a></li>
+                                    <li><a href='/hcm/GiangDay22/DanhGiaMonHocVaHoatDongGiaoDucHK1_22'>Đánh giá môn học cuối HK1</a></li>
+                                    <li><a href='/hcm/GiangDay22/DanhGiaNangLucPhamChatHK1'>Đánh giá năng lực, phẩm chất HK1</a></li>
+                                    <li><a href='/hcm/GiangDay22/DanhGiaMonHocVaHoatDongGiaoDucGiuaHK2_TT22'>Đánh giá môn học giữa HK 2</a></li>
+                                    <li><a href='/hcm/GiangDay22/DanhGiaMonHocVaHoatDongGiaoDucCN_22'>Đánh giá môn học HK2 (Cả năm)</a></li>
+                                    <li><a href='/hcm/GiangDay22/DanhGiaNangLucPhamChatCN'>Đánh giá năng lực, phẩm chất HK2 (Cả năm)</a></li>
+                                    <li><a href='/hcm/ThongTu22/BangTongHopDanhGiaHocSinhGiuaKy'>Bảng tổng hợp đánh giá học sinh giữa kỳ</a></li>
+                                    <li><a href='/hcm/ThongTu22/BangTongHopDanhGiaHocSinhCuoiKy'>Bảng tổng hợp đánh giá học sinh cuối kỳ</a></li>
+                                    <li><a href='/hcm/GiangDay22/BangTongHopNhanXetThuongXuyenGVBM_22'>Bảng tổng hợp nhận xét thường xuyên GVBM</a></li>
+                                    <li><a href='/hcm/GiangDay22/BangTongHopNhanXetThuongXuyenGVCN_22'>Bảng tổng hợp nhận xét thường xuyên GVCN</a></li>
+                                    <li><a href='/hcm/ThongTu22/XetHoanThanhChuongTrinhLopHoc'>Xét hoàn thành CT lớp học</a></li>
+                                    <li><a href='/hcm/ThongTu22/DuyetHoanThanhChuongTrinhLopHoc'>Duyệt hoàn thành CT lớp học</a></li>
+                                    <li><a href='/hcm/ThongTu22/XetHoanThanhCTTieuHoc'>Xét hoàn thành CT tiểu học</a></li>
+                                    <li><a href='/hcm/GiangDay22/SucKhoeTieuHoc_22'>Sức khỏe</a></li>
+                                    <li><a href='/hcm/GiangDay22/KhenThuongTieuHoc_22'>Khen thưởng/Thành tích</a></li>
+                                    <li><a href='/hcm/GiangDay22/HocBaDienTu_22'>Học bạ điện tử</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Giáo viên</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/PhanQuyenNhapDiemTieuHoc'>Phân quyền giáo viên nhập điểm</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thời khóa biểu</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThoiKhoaBieuTruong/TieuHoc'>Danh sách thời khóa biểu</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/TieuHoc'>Xếp thời khóa biểu</a></li>
+                                    <li><a href='/hcm/ThoiKhoaBieuLopHoc/TieuHoc'>Thời khóa biểu lớp học</a></li>
+                                    <li><a href='/hcm/ThoiKhoaBieuGiaoVien/TieuHoc'>Thời khóa biểu giáo viên</a></li>
+                                    <li><a href='/hcm/TKBToanTruong/TieuHoc'>Thời khóa biểu toàn trường</a></li>
+                                    <li><a href='/hcm/NhatKyLichHocGiaoVien/TieuHoc'>Nhật ký lịch học giáo viên</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/ChuanBiDuLieuTKBTieuHoc'>Chuẩn bị dữ liệu TKB</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/LichBanGiaoVienTieuHoc'>Danh sách lịch bận giáo viên</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/BaoCaoTongHopHocSinhTieuHoc'>Báo cáo tổng hợp học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeChiTietHocSinhThoiHocTieuHoc'>Thống kê chi tiết học sinh thôi học </a></li>
+                                    <li><a href='/hcm/GiangDay/BaoCaoSuaDiemTieuHoc'>Báo cáo sửa điểm</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoanDoiTheoLopTieuHoc'>Thống kê đoàn, đội theo lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoanDoiTheoKhoiTieuHoc'>Thống kê đoàn, đội theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTinhHinhKyLuatHocSinhTieuHoc'>Thống kê tình hình kỷ luật học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTinhHinhKyLuatHocSinhTheoKhoiTieuHoc'>Thống kê tình hình kỷ luật học sinh theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeHocBoiDuongHeTieuHoc'>Thống kê học bồi dưỡng hè</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDanhGiaMonHocVaHoatDongGiaoDuc'>Thống kê đánh giá môn học & hoạt động GD</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDanhGiaPhamChatVaNangLuc'> Thống kê đánh giá phẩm chất & năng lực</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Giảng dạy</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/KeHoachLopHocNienHoc/TrungHoc'>Kế hoạch lớp học năm học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc/PhanKeHoachDayHocLopHocTH'>Phân kế hoạch dạy học lớp học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Lớp học</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhSachLophoc/TrungHoc'>Danh mục lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeSiSoLopHocTH'>Thống kê sĩ số lớp học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Học sinh</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/HoSoHocSinh/TrungHoc'>Hồ sơ học sinh</a></li>
+                                    <li><a href='/hcm/DanhSachLopHocHocSinh/TrungHoc'>Danh sách lớp học học sinh</a></li>
+                                    <li><a href='javascript:' onClick='showPopupImportHocSinh("/hcm/HoSoHocSinh/ImportHocSinhTH")'>Import học sinh</a></li>
+                                    <li><a href='/hcm/DiemDanh/TrungHoc'>Điểm danh</a></li>
+                                    <li><a href='/hcm/XetLenLopLuuBan/TrungHoc'>Xét lên lớp</a></li>
+                                    <li><a href='/hcm/XetLenLop/TrungHoc'>Xét lên lớp (tạm)</a></li>
+                                    <li><a href='/hcm/GiangDay/ChuyenLopTH'>Chuyển lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/QuanLyKyLuatTH'>Quản lý kỷ luật</a></li>
+                                    <li><a href='/hcm/DangKyVaoLop1_6_10/IndexMode6'>Đăng ký vào lớp 6</a></li>
+                                    <li><a href='/hcm/XepLop1_6_10/Index6'>Xếp học sinh vào lớp 6</a></li>
+                                    <li><a href='/hcm/DangKyVaoLop1_6_10/IndexMode10'>Đăng ký vào lớp 10</a></li>
+                                    <li><a href='/hcm/XepLop1_6_10/Index10'>Xếp học sinh vào lớp 10</a></li>
+                                    <li><a href='/hcm/TuyenSinh/XepLopTHCS'>Xếp lớp THCS</a></li>
+                                    <li><a href='/hcm/TuyenSinh/XepLopTHPT'>Xếp lớp THPT</a></li>
+                                    <li><a href='/hcm/GiangDay/XacNhanChuyenTruongTH'>Xác nhận chuyển trường</a></li>
+                                    <li><a href='/hcm/ChuyenTruong/TrungHoc'>Tiếp nhận học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/HocSinhThoiHoc/TrungHoc'>Danh sách học sinh thôi học</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhSachHocSinhThiLaiTH'>Danh sách học sinh thi lại</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhSachHocSinhRenLuyenHeTH'>Danh sách học sinh rèn luyện hè</a></li>
+                                    <li><a href='/hcm/GiangDay/MienMonHocTH'>Danh sách học sinh miễn môn học</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhHieuHocSinhTH'>Danh hiệu học sinh</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Điểm THCS</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/DiemHK1THCS'>Nhập điểm chi tiết môn HK 1</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/NhanXetHK1THCS'>Nhận xét môn học HK 1</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHK1/THCS'>Xếp loại hạnh kiểm HK 1</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/HocKy1THCS'>Xếp loại học lực HK 1</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/THCS1'>Nhận xét môn học của giáo viên HK 1</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/DiemHK2THCS'>Nhập điểm chi tiết môn HK 2</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/NhanXetHK2THCS'>Nhận xét môn học HK 2</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHK2/THCS'>Xếp loại hạnh kiểm HK 2</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/HocKy2THCS'>Xếp loại học lực HK 2</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/THCS2'>Nhận xét môn học của giáo viên HK 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Điểm THPT</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/DiemHK1THPT'>Nhập điểm chi tiết môn HK 1</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/NhanXetHK1THPT'>Nhận xét môn học HK 1</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHK1/THPT'>Xếp loại hạnh kiểm HK 1</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/HocKy1THPT'>Xếp loại học lực HK 1</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/THPT1'>Nhận xét môn học của giáo viên HK 1</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/DiemHK2THPT'>Nhập điểm chi tiết môn HK 2</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/NhanXetHK2THPT'>Nhận xét môn học HK 2</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHK2/THPT'>Xếp loại hạnh kiểm HK 2</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/HocKy2THPT'>Xếp loại học lực HK 2</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/THPT2'>Nhận xét môn học của giáo viên HK 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Điểm tổng kết</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/CaNamTH'>Xếp loại học lực năm học</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemCN/TrungHoc'>Xếp loại hạnh kiểm năm học</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/TrungHoc3'>Nhận xét môn học của giáo viên năm học</a></li>
+                                    <li><a href='/hcm/BangTongKetTrungBinhNamHoc/TrungHoc'>Bảng tổng kết môn học</a></li>
+                                    <li><a href='/hcm/BangTongKetMonHocKhoiLop/TrungHoc'>Bảng tổng kết môn học khối lớp</a></li>
+                                    <li><a href='/hcm/BangTongKetNamHoc/TrungHoc'>Bảng tổng kết năm học</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHocThiLai/NhapDiemMonHocThiLaiTH'>Nhập điểm môn học thi lại</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHocThiLai/NhanXetMonHocThiLaiTH'>Nhận xét môn học thi lại</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHe/TrungHoc'>Xếp loại hạnh kiểm rèn luyện hè</a></li>
+                                    <li><a href='/hcm/NhapXepLoaiHSChuyenTruong/TrungHoc'>Nhập xếp loại học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/GiangDay/NhapDiemHocSinhChuyenTruongTH'>Nhập điểm học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/BangTongKetTrungBinhNamHoc/TinhDiemTrungBinhTrungHoc'>Tính điểm trung bình</a></li>
+                                    <li><a href='/hcm/BangTongKetNamHoc/HocBaDienTu'>Học bạ điện tử</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>TKB</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThoiKhoaBieuTruong/TrungHoc'>Danh sách thời khóa biểu</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/TrungHoc'>Xếp thời khóa biểu</a></li>
+                                    <li><a href='/hcm/ThoiKhoaBieuLopHoc/TrungHoc'>Thời khóa biểu lớp học</a></li>
+                                    <li><a href='/hcm/ThoiKhoaBieuGiaoVien/TrungHoc'>Thời khóa biểu giáo viên</a></li>
+                                    <li><a href='/hcm/TKBToanTruong/TrungHoc'>Thời khóa biểu toàn trường</a></li>
+                                    <li><a href='/hcm/NhatKyLichHocGiaoVien/TrungHoc'>Nhật ký lịch học giáo viên</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/ChuanBiDuLieuTKBTH'>Chuẩn bị dữ liệu TKB</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/LichBanGiaoVienTH'>Danh sách lịch bận giáo viên</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tốt nghiệp THCS</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/DangKyXetTotNghiep'>Đăng ký xét tốt nghiệp</a></li>
+                                    <li><a href='/hcm/GiangDay/XetTotNghiep'>Xét tốt nghiệp</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhSachHocSinhTotNghiep'>Danh sách học sinh tốt nghiệp</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Giáo viên</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiaoVienToChuyenMon/TrungHoc'>Giáo viên tổ chuyên môn</a></li>
+                                    <li><a href='/hcm/GiaoVienGiangDayMonHoc/TrungHoc'>Giáo viên giảng dạy môn học</a></li>
+                                    <li><a href='/hcm/GiangDay/PhanQuyenNhapDiemTH'>Phân quyền giáo viên nhập điểm </a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tuyển sinh</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/TuyenSinh/DotTuyenSinh'>Đợt tuyển sinh</a></li>
+                                    <li><a href='/hcm/TuyenSinh/HoSoTuyenSinhTHCS'>Hồ sơ tuyển sinh THCS</a></li>
+                                    <li><a href='/hcm/TuyenSinh/HoSoTuyenSinhTHPT'>Hồ sơ tuyển sinh THPT</a></li>
+                                    <li><a href='/hcm/TuyenSinh/XetTuyen'>Xét tuyển</a></li>
+                                    <li><a href='/hcm/TuyenSinh/DanhSachHocSinhTrungTuyen'>Danh sách học sinh trúng tuyển</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tuyển sinh (TT)</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/TuyenSinh/MonThiTuyenSinh'>Môn thi tuyển sinh</a></li>
+                                    <li><a href='/hcm/TuyenSinh/DanhSachPhongThi'>Danh sách phòng thi</a></li>
+                                    <li><a href='/hcm/TuyenSinh/DanhSoBaoDanh'>Đánh số báo danh</a></li>
+                                    <li><a href='/hcm/TuyenSinh/XepPhongThiMonThi'>Xếp phòng thi - môn thi</a></li>
+                                    <li><a href='javascript:' onClick='showPopupDonTuiDanhPhach()'>Dồn túi bài thi - đánh phách</a></li>
+                                    <li><a href='/hcm/TuyenSinh/HuongDanDanhPhach'>Hướng dẫn đánh phách</a></li>
+                                    <li><a href='/hcm/TuyenSinh/HuongDanDonTuiBaiThi'>Hướng dẫn dồn túi bài thi</a></li>
+                                    <li><a href='/hcm/TuyenSinh/NhapDiemTheoSoPhach'>Nhập điểm theo số phách</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Khảo thí</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/KhaoThi/DanhMucPhongThi'>Danh mục phòng thi</a></li>
+                                    <li><a href='/hcm/KhaoThi/DotKhaoThi'>Đợt khảo thí</a></li>
+                                    <li><a href='/hcm/KhaoThi/DanhSachPhongThi'>Danh sách phòng thi</a></li>
+                                    <li><a href='/hcm/KhaoThi/XepPhongThi'>Xếp phòng thi</a></li>
+                                    <li><a href='/hcm/KhaoThi/DanhSoBaoDanh'>Đánh số báo danh</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/BaoCaoTongHopHocSinhTHPT'>Báo cáo tổng hợp học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeXepLoaiHocLucTHPT'>Thống kê xếp loại học lực</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeXepLoaiHanhKiemTHPT'>Thống kê xếp loại hạnh kiểm</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeKetQuaXepLoaiHanhKiemHocLucLopHocTrungHoc'>Thống kê kết quả xếp loại hạnh kiểm, học lực lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeChiTietHocSinhThoiHocTH'>Thống kê chi tiết học sinh thôi học</a></li>
+                                    <li><a href='/hcm/GiangDay/BaoCaoSuaDiemTH'>Báo cáo sửa điểm</a></li>
+                                    <li><a href='/hcm/GiangDay/HocSinhTheoDiemTKTH'>Báo cáo danh sách học sinh theo điểm TB</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoanDoiTheoLopTH'>Thống kê đoàn, đội theo lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoanDoiTheoKhoiTH'>Thống kê đoàn, đội theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTBMTheoLopTH'>Thống kê điểm TBM học kỳ, cả năm</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTBMTheoKhoiTH'>Thống kê điểm TBM học kỳ, cả năm theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTinhHinhKyLuatHocSinhTH'>Thống kê tình hình kỷ luật học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTinhHinhKyLuatHocSinhTheoKhoiTH'>Thống kê tình hình kỷ luật học sinh theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoTuoiTheoGioiTinhVaDanTocTrungHoc'>Thống kê độ tuổi theo giới tính và dân tộc</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeHocBoiDuongHeTH'>Thống kê học bồi dưỡng hè</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Giảng dạy</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/KeHoachLopHocNienHoc/GDTX'>Kế hoạch lớp học năm học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc/PhanKeHoachDayHocLopHocGDTX'>Phân kế hoạch dạy học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Lớp học</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhSachLophoc/GDTX'>Danh mục lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeSiSoLopHocGDTX'>Thống kê sĩ số lớp học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Học sinh</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/HoSoHocSinh/GDTX'>Hồ sơ học sinh</a></li>
+                                    <li><a href='/hcm/DanhSachLopHocHocSinh/GDTX'>Danh sách lớp học học sinh</a></li>
+                                    <li><a href='javascript:' onClick='showPopupImportHocSinh("/hcm/HoSoHocSinh/ImportHocSinhGDTX")'>Import học sinh</a></li>
+                                    <li><a href='/hcm/DiemDanh/GDTX'>Điểm danh</a></li>
+                                    <li><a href='/hcm/XetLenLop/GDTX'>Xét lên lớp (tạm)</a></li>
+                                    <li><a href='/hcm/XetLenLopLuuBan/GDTX'>Xét lên lớp</a></li>
+                                    <li><a href='/hcm/DangKyVaoLop1_6_10/IndexMode6GDTX'>Ghi danh lớp 6</a></li>
+                                    <li><a href='/hcm/XepLop1_6_10/Index6GDTX'>Xếp học sinh vào lớp 6</a></li>
+                                    <li><a href='/hcm/DangKyVaoLop1_6_10/IndexMode10GDTX'>Ghi danh lớp 10</a></li>
+                                    <li><a href='/hcm/XepLop1_6_10/Index10GDTX'>Xếp học sinh vào lớp 10</a></li>
+                                    <li><a href='/hcm/GiangDay/ChuyenLopGDTX'>Chuyển lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/QuanLyKyLuatGDTX'>Quản lý kỷ luật</a></li>
+                                    <li><a href='/hcm/GiangDay/XacNhanChuyenTruongGDTX'>Xác nhận chuyển trường</a></li>
+                                    <li><a href='/hcm/ChuyenTruong/GDTX'>Tiếp nhận học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/HocSinhThoiHoc/GDTX'>Danh sách học sinh thôi học</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhSachHocSinhThiLaiGDTX'>Danh sách học sinh thi lại</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhSachHocSinhRenLuyenHeGDTX'>Danh sách học sinh rèn luyện hè</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhHieuHocSinhGDTX'>Danh hiệu học sinh</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Kết quả HK 1</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/DiemHK1GDTX'>Nhập điểm chi tiết môn HK 1</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/NhanXetHK1GDTX'>Nhận xét môn học HK 1</a></li>
+                                    <li><a href='/hcm/XetKetQuaHocKy1/GDTX'>Tính điểm trung bình HK 1</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/HocKy1GDTX'>Xếp loại học lực HK 1</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHK1/GDTX'>Xếp loại hạnh kiểm HK 1</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/GDTX1'>Nhận xét môn học của giáo viên HK 1</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Kết quả HK 2</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/DiemHK2GDTX'>Nhập điểm chi tiết môn HK 2</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHoc/NhanXetHK2GDTX'>Nhận xét môn học HK 2</a></li>
+                                    <li><a href='/hcm/XetKetQuaHocKy2/GDTX'>Tính điểm trung bình HK 2</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/HocKy2GDTX'>Xếp loại học lực HK 2</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHK2/GDTX'>Xếp loại hạnh kiểm HK 2</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/GDTX2'>Nhận xét môn học của giáo viên HK 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Kết quả năm học</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/XetKetQuaNamHoc/GDTX'>Tính điểm trung bình năm học</a></li>
+                                    <li><a href='/hcm/XepLoaiHocLucLopHoc/CaNamGDTX'>Xếp loại học lực năm học</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemCN/GDTX'>Xếp loại hạnh kiểm năm học</a></li>
+                                    <li><a href='/hcm/NhanXetMonHocGV/GDTX3'>Nhận xét môn học của giáo viên năm học</a></li>
+                                    <li><a href='/hcm/BangTongKetTrungBinhNamHoc/GDTX'>Bảng tổng kết môn học</a></li>
+                                    <li><a href='/hcm/BangTongKetMonHocKhoiLop/GDTX'>Bảng tổng kết môn học khối lớp</a></li>
+                                    <li><a href='/hcm/BangTongKetNamHoc/GDTX'>Bảng tổng kết năm học</a></li>
+                                    <li><a href='/hcm/GiangDay/NhapDiemHocSinhChuyenTruongGDTX'>Nhập điểm học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/NhapXepLoaiHSChuyenTruong/GDTX'>Nhập xếp loại học sinh chuyển trường</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHocThiLai/NhapDiemMonHocThiLaiGDTX'>Nhập điểm môn học thi lại</a></li>
+                                    <li><a href='/hcm/DiemNhanXetMonHocThiLai/NhanXetMonHocThiLaiGDTX'>Nhận xét môn học thi lại</a></li>
+                                    <li><a href='/hcm/XepLoaiHanhKiemHe/GDTX'>Xếp loại hạnh kiểm rèn luyện hè</a></li>
+                                    <li><a href='/hcm/BangTongKetTrungBinhNamHoc/TinhDiemTrungBinhGDTX'>Tính điểm trung bình</a></li>
+                                    <li><a href='/hcm/BangTongKetNamHoc/HocBaDienTu'>Học bạ điện tử</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thời khóa biểu</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThoiKhoaBieuTruong/GDTX'>Danh sách thời khóa biểu</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/GDTX'>Xếp thời khóa biểu</a></li>
+                                    <li><a href='/hcm/ThoiKhoaBieuLopHoc/GDTX'>Thời khóa biểu lớp học</a></li>
+                                    <li><a href='/hcm/ThoiKhoaBieuGiaoVien/GDTX'>Thời khóa biểu giáo viên</a></li>
+                                    <li><a href='/hcm/TKBToanTruong/GDTX'>Thời khóa biểu toàn trường</a></li>
+                                    <li><a href='/hcm/NhatKyLichHocGiaoVien/GDTX'>Nhật ký lịch học giáo viên</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/ChuanBiDuLieuTKBGDTX'>Chuẩn bị dữ liệu TKB</a></li>
+                                    <li><a href='/hcm/XepThoiKhoaBieu/LichBanGiaoVienGDTX'>Danh sách lịch bận giáo viên</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Giáo viên</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiaoVienToChuyenMon/GDTX'>Giáo viên tổ chuyên môn</a></li>
+                                    <li><a href='/hcm/GiaoVienGiangDayMonHoc/GDTX'>Giáo viên giảng dạy môn học</a></li>
+                                    <li><a href='/hcm/GiangDay/PhanQuyenNhapDiemGDTX'>Phân quyền giáo viên nhập điểm</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/GiangDay/BaoCaoTongHopHocSinhGDTX'>Báo cáo tổng hợp học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeChiTietHocSinhThoiHocGDTX'>Thống kê chi tiết học sinh thôi học</a></li>
+                                    <li><a href='/hcm/GiangDay/BaoCaoSuaDiemGDTX'>Báo cáo sửa điểm</a></li>
+                                    <li><a href='/hcm/GiangDay/HocSinhTheoDiemTKGDTX'>Báo cáo danh sách học sinh theo điểm TB</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeKetQuaXepLoaiHanhKiemHocLucLopHocGDTX'>Thống kê kết quả xếp loại hạnh kiểm, học lực lớp học</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoanDoiTheoLopGDTX'>Thống kê đoàn, đội theo lớp</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoanDoiTheoKhoiGDTX'>Thống kê đoàn, đội theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTBMTheoLopGDTX'>Thống kê điểm TBM học kỳ, cả năm</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTBMTheoKhoiGDTX'>Thống kê điểm TBM học kỳ, cả năm theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTinhHinhKyLuatHocSinhGDTX'>Thống kê tình hình kỷ luật học sinh</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeTinhHinhKyLuatHocSinhTheoKhoiGDTX'>Thống kê tình hình kỷ luật học sinh theo khối</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeDoTuoiTheoGioiTinhVaDanTocGDTX'>Thống kê độ tuổi theo giới tính và dân tộc</a></li>
+                                    <li><a href='/hcm/GiangDay/ThongKeHocBoiDuongHeGDTX'>Thống kê học bồi dưỡng hè</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Thẻ tài sản</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/TaiSanDonVi/SoGiaoDuc'>Tài sản sở giáo dục</a></li>
+                                    <li><a href='/hcm/TaiSanDonVi/PhongGDDT'>Tài sản phòng GD & ĐT</a></li>
+                                    <li><a href='/hcm/TaiSanDonVi/Truong'>Tài sản trường</a></li>
+                                    <li><a href='/hcm/DieuChuyenTaiSan'>Điều chuyển tài sản</a></li>
+                                    <li><a href='/hcm/TaiSanDonVi/KhauHaoTaiSan'>Khấu hao tài sản</a></li>
+                                    <li><a href='/hcm/TangGiamGiaTriTaiSan'>Tăng giảm giá trị tài sản</a></li>
+                                    <li><a href='/hcm/TaiSanDonVi/DanhSachTaiSanDenHanThanhLy'>Danh sách tài sản đến hạn thanh lý</a></li>
+                                    <li><a href='/hcm/TaiSanDonVi/ThanhLyTaiSan'>Thanh lý tài sản</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Cơ sở vật chất</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhSachPhongHoc'>Danh sách phòng học</a></li>
+                                    <li><a href='/hcm/DanhSachPhongKhac/SoGiaoDuc'>Danh sách phòng sở giáo dục</a></li>
+                                    <li><a href='/hcm/DanhSachPhongKhac/PhongGDDT'>Danh sách phòng phòng GD & ĐT</a></li>
+                                    <li><a href='javascript:' onClick='showPopupCoSoVatChatKhac()'>Cơ sở vật chất khác</a></li>
+                                    <li><a href='javascript:' onClick='showPopupCoSoVatChatKhacPhongGDDT()'>Cơ sở vật chất khác  - Phòng GD & ĐT</a></li>
+                                    <li><a href='javascript:' onClick='showPopupCoSoVatChatKhacSoGiaoDuc()'>Cơ sở vật chất khác - Sở giáo dục</a></li>
+                                    <li><a href='javascript:' onClick='showPopupCoSoVatChatKhacVaThuVien()'>Thông tin cơ sở vật chất & thư viện</a></li>
+                                    <li><a href='javascript:' onClick='showPopupThongTinThietBiTruongHoc()'>Thông tin thiết bị trường học</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/DanhMucBaiDaySuDungTBDH'>Danh mục bài dạy sử dụng TBDH</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/KhaiBaoThietBiDayHoc'>Khai báo thiết bị dạy học</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thư viện</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/CoSoVatChat/DangKySachGiaoKhoaVaGiaoVien'>Đăng ký sách giáo khoa & giáo viên</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/KiemKeSachGiaoKhoaVaGiaoVien'>Kiểm kê sách giáo khoa & giáo viên</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/DangKySachCaBiet'>Đăng ký sách cá biệt</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/KiemKeSachCaBiet'>Kiểm kê sách cá biệt</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/SoTongQuatNhapKho'>Sổ tổng quát (Nhập kho)</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/SoTongQuatXuatKho'>Sổ tổng quát (Xuất kho)</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/SoTongQuatTinhHinhKho'>Sổ tổng quát (Tình hình kho)</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeSoTongQuatNhapKho'>Thống kê sổ tổng quát (Nhập kho)</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeSoTongQuatXuatKho'>Thống kê sổ tổng quát (Xuất kho)</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeSoTongQuatTinhHinhKho'>Thống kê sổ tổng quát (Tình hình kho)</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Báo cáo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/TaiSanDieuChuyenSoGiaoDuc'>Tài sản điều chuyển sở giáo dục</a></li>
+                                    <li><a href='/hcm/TaiSanDieuChuyenPhongGDDT'>Tài sản điều chuyển phòng GD & ĐT</a></li>
+                                    <li><a href='/hcm/TaiSanDieuChuyenTruong'>Tài sản điều chuyển trường</a></li>
+                                    <li><a href='/hcm/NhatKyLuanChuyenTaiSan'>Nhật ký luân chuyển tài sản</a></li>
+                                    <li><a href='/hcm/TaiSanDonVi/BaoCaoKhauHaoTaiSan'>Báo cáo khấu hao tài sản</a></li>
+                                    <li><a href='/hcm/ThongKeTaiSan'>Thống kê tài sản</a></li>
+                                    <li><a href='/hcm/BaoCaoTaiSanDonVi'>Báo cáo tài sản đơn vị</a></li>
+                                    <li><a href='/hcm/BaoCaoTaiSanDonVi/TaiSanCoDinh'>Báo cáo tài sản cố định</a></li>
+                                    <li><a href='/hcm/BaoCaoTinhHinhSuDungTaiSan'>Báo cáo tình hình sử dụng tài sản </a></li>
+                                    <li><a href='/hcm/BaoCaoTaiSan/TaiSanThanhLy'>Báo cáo danh sách tài sản đã thanh lý</a></li>
+                                    <li><a href='/hcm/BaoCaoTaiSan/ChatLuongPhongHoc'>Thống kê chất lượng phòng học</a></li>
+                                    <li><a href='/hcm/BaoCaoTaiSan/ThongKeLoaiPhongHoc'>Thống kê loại phòng học</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeCoSoVatChat'>Thống kê cơ sở vật chất</a></li>
+                                    <li><a href='/hcm/BaoCaoTaiSan/ThongKeCSVCKhac'>Thống kê cơ sở vật chất khác</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeVonTaiLieu'>Thống kê vốn tài liệu</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeDanhHieuTVTruongHoc'>Thống kê danh hiệu TV trường học</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/ThongKeBaiDaySuDungTBDH'>Thống kê bài dạy sử dụng TBDH</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Thanh tra</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThanhTra/KeHoachThanhTraNam'>Kế hoạch thanh tra năm</a></li>
+                                    <li><a href='/hcm/ThanhTra/NoiDungKeHoachThanhTraNam'>Nội dung kế hoạch thanh tra năm</a></li>
+                                    <li><a href='/hcm/ThanhTra/KeHoachThanhTraThang'>Kế hoạch thanh tra tháng</a></li>
+                                    <li><a href='/hcm/ThanhTra/NoiDungKeHoachThanhTraThang'>Nội dung kế hoạch thanh tra tháng</a></li>
+                                    <li><a href='/hcm/ThanhTra/HoSoThanhTra'>Hồ sơ thanh tra</a></li>
+                                    <li><a href='/hcm/ThanhTra/ThuLyHoSo'>Thụ lý hồ sơ</a></li>
+                                    <li><a href='/hcm/ThanhTra/ThongKeHoSoThanhTra'>Thống kê hồ sơ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Kiểm tra</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThanhTra/KeHoachKiemTraNam'>Kế hoạch kiểm tra năm</a></li>
+                                    <li><a href='/hcm/ThanhTra/NoiDungKeHoachKiemTraNam'>Nội dung kế hoạch kiểm tra năm</a></li>
+                                    <li><a href='/hcm/ThanhTra/KeHoachKiemTraThang'>Kế hoạch kiểm tra tháng</a></li>
+                                    <li><a href='/hcm/ThanhTra/NoiDungKeHoachKiemTraThang'>Nội dung kế hoạch kiểm tra tháng</a></li>
+                                    <li><a href='/hcm/ThanhTra/HoSoKiemTra'>Hồ sơ kiểm tra</a></li>
+                                    <li><a href='/hcm/ThanhTra/ThuLyHoSoKiemTra'>Thụ lý hồ sơ</a></li>
+                                    <li><a href='/hcm/ThanhTra/ThongKeHoSoKiemTra'>Thống kê hồ sơ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='/hcm/ThanhTra/TiepCongDan'>Tiếp công dân</a></li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Soạn thảo</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThiTrucTuyen/BoCauHoi'>Bộ câu hỏi</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhMucPhan'>Phần</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/Chuong'>Chương</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/BaiHoc'>Bài học</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/LichThi'>Lịch thi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Quản lý</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThiTrucTuyen/PhanCongDuyetCauHoi'>Phân công duyệt câu hỏi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Trắc nghiệm</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachCauHoiCha'>Danh sách câu hỏi cha</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/CauHoi'>Danh sách câu hỏi trắc nghiệm</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DuyetCauHoi'>Duyệt câu hỏi trắc nghiệm</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachBoDeThiSo'>Danh sách bộ đề thi trắc nghiệm</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachBoDeThiTruong'>Danh sách bộ đề thi trắc nghiệm trường</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachBoDeThiGiaoVien'>Danh sách bộ đề thi trắc nghiệm giáo viên</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/PhanCongDuyetBoDe'>Phân công duyệt bộ đề trắc nghiệm</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DuyetBoDeThi'>Duyệt bộ đề thi trắc nghiệm</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/PhanBoDeThi'>Phân bộ đề thi cho trường</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/PhanLichThi'>Phân lịch thi</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/KichHoatThi'>Kích hoạt thi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tự luận</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThiTrucTuyen/CauHoiTuLuan'>Danh sách câu hỏi tự luận</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DuyetCauHoiTuLuan'>Duyệt câu hỏi tự luận</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachBoDeThiTuLuanSo'>Danh sách bộ đề thi tự luận</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachBoDeThiTuLuanTruong'>Danh sách bộ đề thi tự luận trường</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhSachBoDeThiTuLuanGiaoVien'>Danh sách bộ đề thi tự luận giáo viên</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/PhanCongDuyetBoDeTuLuan'>Phân công duyệt bộ đề tự luận</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DuyetBoDeThiTuLuan'>Duyệt bộ đề thi tự luận</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thống kê</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThiTrucTuyen/ThongKeTheoBoDeThi'>Thống kê theo bộ đề thi</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/ThongKeTheoCauHoi'>Thống kê theo câu hỏi</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/ThongKeTheoCauTraLoi'>Thống kê theo câu trả lời</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/ThongKeTheoThangDiem'>Thống kê theo thang điểm</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/BaoCaoDiemThi'>Báo cáo điểm thi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='javascript:'>Danh mục chung</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucQuocGia'>Quốc gia</a></li>
+                                    <li><a href='/hcm/DanhMucTinhThanh'>Tỉnh thành</a></li>
+                                    <li><a href='/hcm/DanhMucQuanHuyen'>Quận huyện </a></li>
+                                    <li><a href='/hcm/DanhMucPhuongXa'>Phường xã </a></li>
+                                    <li><a href='/hcm/DanhMucThonAp'>Thôn ấp</a></li>
+                                    <li><a href='/hcm/DanhMucDanToc'>Dân tộc</a></li>
+                                    <li><a href='/hcm/DanhMucTonGiao'>Tôn giáo</a></li>
+                                    <li><a href='/hcm/DanhMucDonViTinh'>Đơn vị tính</a></li>
+                                    <li><a href='/hcm/DanhMucTienTe'>Tiền tệ</a></li>
+                                    <li><a href='/hcm/DanhMucBieuMau'>Biểu mẫu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Nhân sự</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucChucVu'>Chức vụ</a></li>
+                                    <li><a href='/hcm/DanhMucLoaiHopDong'>Loại hợp đồng</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucTruongPhoDonVi'>Trưởng phó đơn vị</a></li>
+                                    <li><a href='/hcm/DanhMucNgachCongChuc'>Ngạch công chức</a></li>
+                                    <li><a href='/hcm/DanhMucChiTietNgach'>Chi tiết ngạch công chức</a></li>
+                                    <li><a href='/hcm/DanhMucDanhHieu'>Danh hiệu</a></li>
+                                    <li><a href='/hcm/DanhMucQuanHeGiaDinh'>Quan hệ gia đình</a></li>
+                                    <li><a href='/hcm/DanhMucThanhPhanBanThan'>Thành phần bản thân</a></li>
+                                    <li><a href='/hcm/DanhMucThanhPhanGiaDinh'>Thành phần gia đình</a></li>
+                                    <li><a href='/hcm/DanhMucTinhTrangHonNhan'>Tình trạng hôn nhân</a></li>
+                                    <li><a href='/hcm/DanhMucHinhThucKhenThuong'>Hình thức khen thưởng</a></li>
+                                    <li><a href='/hcm/DanhMucHinhThucKyLuat'>Hình thức kỷ luật</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucXepLoaiChung'>Xếp loại chung</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucXepLoaiDaoDuc'>Xếp loại đạo đức</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucXepLoaiSucKhoe'>Xếp loại sức khỏe</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucNhiemVuDuocGiao'>Nhiệm vụ được giao</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucXepLoaiTDChuyenMon'>Xếp loại trình độ chuyên môn</a></li>
+                                    <li><a href='/hcm/NhanSu/DanhMucXepLoaiDeTai'>Xếp loại đề tài</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Trình độ nhân sự</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucChuyenNganh'>Chuyên ngành</a></li>
+                                    <li><a href='/hcm/DanhMucChungChi'>Chứng chỉ</a></li>
+                                    <li><a href='/hcm/DanhMucChungChiViTinh'>Chứng chỉ vi tính</a></li>
+                                    <li><a href='/hcm/DanhMucNgoaiNgu'>Ngoại ngữ</a></li>
+                                    <li><a href='/hcm/DanhMucHocHam'>Học hàm</a></li>
+                                    <li><a href='/hcm/DanhMucHocVan'>Học vấn</a></li>
+                                    <li><a href='/hcm/DanhMucHocVi'>Học vị</a></li>
+                                    <li><a href='/hcm/DanhMucQuanLyNhaNuoc'>Trình độ quản lý nhà nước</a></li>
+                                    <li><a href='/hcm/DanhMucQuanLyGiaoDuc'>Trình độ quản lý giáo dục</a></li>
+                                    <li><a href='/hcm/DanhMucChinhTri'>Trình độ chính trị</a></li>
+                                    <li><a href='/hcm/NhanSu/TrinhDoChuyenMon'>Trình độ chuyên môn</a></li>
+                                    <li><a href='/hcm/NhanSu/ChungChiNgoaiNgu'>Chứng chỉ ngoại ngữ</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Giảng dạy</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucCapHoc'>Cấp học</a></li>
+                                    <li><a href='/hcm/DanhMucNienHoc'>Năm học</a></li>
+                                    <li><a href='/hcm/DanhMucKhoiLop'>Khối lớp</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc/KhoiLopMonHoc'>Khối lớp môn học</a></li>
+                                    <li><a href='/hcm/KeHoachDayHoc/ThuTuMonHocNienHoc'>Thứ tự môn học niên học</a></li>
+                                    <li><a href='/hcm/DanhMucMonHoc'>Môn học</a></li>
+                                    <li><a href='/hcm/DanhMucMonHoc22/Index_22'>Môn học (TT22)</a></li>
+                                    <li><a href='/hcm/DanhMucChuyenMon'>Chuyên môn</a></li>
+                                    <li><a href='/hcm/DanhMucToChuyenMon'>Tổ chuyên môn</a></li>
+                                    <li><a href='/hcm/DanhMucHanhKiem'>Hạnh kiểm</a></li>
+                                    <li><a href='/hcm/DanhMucDienChinhSach'>Diện chính sách</a></li>
+                                    <li><a href='/hcm/DanhMucMamNon/LinhVucPhatTrienMamNon'>Lĩnh vực phát triển mầm non</a></li>
+                                    <li><a href='/hcm/DanhMucMamNon/ChuDeMamNon'>Chủ đề mầm non</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tài sản</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucLoaiTaiSan'>Loại tài sản</a></li>
+                                    <li><a href='/hcm/DanhMucTaiSan'>Tài sản</a></li>
+                                    <li><a href='/hcm/DanhMucTinhTrangTaiSan'>Tình trạng tài sản</a></li>
+                                    <li><a href='/hcm/DanhMucNhaSanXuat'>Nhà sản xuất</a></li>
+                                    <li><a href='/hcm/DanhMucNhaPhanPhoi'>Nhà phân phối</a></li>
+                                    <li><a href='/hcm/GiangDay/DanhHieuThuVien'>Danh hiệu thư viện</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Cơ sở vật chất</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucPhongKhac'>Danh mục phòng khác</a></li>
+                                    <li><a href='/hcm/DanhMucChatLuongPhong'>Chất lượng phòng</a></li>
+                                    <li><a href='/hcm/DanhMucLoaiKhoiPhong'>Loại khối phòng</a></li>
+                                    <li><a href='/hcm/DanhMucLoaiPhongHoc'>Cấp loại phòng</a></li>
+                                    <li><a href='/hcm/DanhMucMucDoDatChuan'>Mức độ đạt chuẩn</a></li>
+                                    <li><a href='/hcm/DanhMucLoaiNguonNuoc'>Loại nguồn nước</a></li>
+                                    <li><a href='/hcm/DanhMucLoaiHangRao'>Loại hàng rào</a></li>
+                                    <li><a href='/hcm/DanhMucLoaiThuVien'>Loại thư viện</a></li>
+                                    <li><a href='/hcm/CoSoVatChat/DanhMucSach'>Sách</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Tài chính</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucTaiChinh/NguonKinhPhi'>Nguồn kinh phí</a></li>
+                                    <li><a href='/hcm/DanhMucTaiChinh/LoaiChiPhi'>Loại chi phí</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thanh tra</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/DanhMucChuDeThanhTra'>Chủ đề thanh tra</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='javascript:'>Thi online</a>
+                                <ul class="sub">
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhMucDoKho'>Độ khó</a></li>
+                                    <li><a href='javascript:' onClick='showPopupDanhMucMucDoDoKho()'>Mức độ và độ khó</a></li>
+                                    <li><a href='/hcm/ThiTrucTuyen/DanhMucNhomCauHoi'>Nhóm câu hỏi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav" style="display:none;">
+                            <li><a href='/hcm/Home/HuongDanMamNon'>Mầm non</a></li>
+                            <li><a href='/hcm/Home/HuongDanTieuHoc'>Tiểu học</a></li>
+                            <li><a href='/hcm/Home/HuongDanTHCS'>THCS</a></li>
+                            <li><a href='/hcm/Home/HuongDanTHPT'>THPT</a></li>
+                        </ul>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                <script src="/hcm/RRContent/d0195c0c9061b5206184ce0cc93cbbd6-27e662d8372a815a1990610132a3e890-RequestReducedScript.js" type="text/javascript"></script>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="main">
+                <script type="text/x-kendo-template" id="templateNotice">
+                    #if(SoSinhNhat>0){#
+                    <li><a class="linkUnderline" href="javascript:" onclick="showPopupThongBao(1)">Sinh nhật <span class="red"> (#=SoSinhNhat#) </span> </a></li>
+                    #}else{#
+                    <li>Sinh nhật <span class="red"> (#=SoSinhNhat#) </span></li>
+                    #}# #if(SoNangLuong>0){#
+                    <li><a class="linkUnderline" href="javascript:" onclick="showPopupThongBao(2)">Nâng lương   <span class="red"> (#=SoNangLuong#) </span></a></li>
+                    #}else{#
+                    <li>Nâng lương <span class="red"> (#=SoNangLuong#) </span></li>
+                    #}# #if(SoHetHanBoNhiem>0){#
+                    <li><a class="linkUnderline" href="javascript:" onclick="showPopupThongBao(3)">Bổ nhiệm   <span class="red"> (#=SoHetHanBoNhiem#) </span></a></li>
+                    #}else{#
+                    <li>Bổ nhiệm <span class="red"> (#=SoHetHanBoNhiem#) </span></li>
+                    #}# #if(SoNghiHuu>0){#
+                    <li><a class="linkUnderline" href="javascript:" onclick="showPopupThongBao(4)">Nghỉ hưu <span class="red"> (#=SoNghiHuu#) </span></a></li>
+                    #}else{#
+                    <li>Nghỉ hưu <span class="red"> (#=SoNghiHuu#) </span></li>
+                    #}# #if(thongBaoMoi>0){#
+                    <li><a class="linkUnderline" href="javascript:" onclick="showPopupThongBaoMoi()">Thông báo mới <span class="red"> (#=thongBaoMoi#) </span></a></li>
+                    #}else{#
+                    <li>Thông báo mới <span class="red"> (#=thongBaoMoi#) </span></li>
+                    #}#
+                </script>
+                <div class="row" style="margin-top: 10px; text-align:center; vertical-align:middle;">
+                    <!-- Metro 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/gv-bomon.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Nhận xét Giáo viên bộ môn</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/gv-chunhiem.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Nhận xét Giáo viên chủ nhiệm</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                       <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/hk1.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Đánh giá môn học giữa kỳ 1 </span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/cuoi-hk1.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Đánh giá môn học cuối kỳ 1 </span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/icon-nangluc.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Đánh giá năng lực & phẩm chất học kỳ 1 </span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                          <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/giua-hk2.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Đánh giá môn học giữa kỳ 2 </span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/cuoi-nam.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Đánh giá môn học cuối nămg</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/nl-cuoi-nam.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Đánh giá năng lực & Phẩm chất cuối năm</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                       <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/tong-hop-giua-ki.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Bảng tổng hợp đánh giá học sinh giữa kỳ</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                     <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/tong-hop-cuoi-ki.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Bảng tổng hợp đánh giá học sinh cuối kỳ</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>  <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/theo-doi-khen-thuong.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Theo dõi khen thưởng</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>  <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/hoc-ba-dien-tu.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Học bạ điện tử</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/thoi-khoa-bieu.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Thời khóa biểu</span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                          <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-image cs-style-3">
+                            <figure>
+                                <img src="images/diem-danh.png" alt="">
+                                <figcaption>
+                                    <h3>300</h3>
+                                    <span>Điểm danh </span>
+                                    <a href="£">Xem chi tiết</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                      
+                 
+                 
+                  
+                  
+                    <!-- End Metro 4 -->
+                </div>
+                <hr />
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div id="footer" class="widget-footer">
+            <div>
+                <div class="copyright"><b>&copy;</b> Bản quyền 2013 thuộc về Sở Gi&#225;o dục v&#224; Đ&#224;o tạo HCM</div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+    </div>
+    <div id="popup">
+        <ul id="context">
+            <li>
+                <a href="/hcm/Common/HuongDanCaiDatIE">Hướng dẫn c&#224;i đặt Internet Explorer 8</a>
+            </li>
+            <li>
+                <a href="/hcm/Common/HuongDanCaiDatChrome">Hướng dẫn c&#224;i đặt Chrome</a>
+            </li>
+            <li>
+                <a href="/hcm/Common/HuongDanCaiDatFirefox">Hướng dẫn c&#224;i đặt Firefox</a>
+            </li>
+            <li>
+                <a href="http://download.teamviewer.com/download/TeamViewerQS.exe" target="_blank">Tải về phầm mềm hỗ trợ từ xa</a>
+            </li>
+        </ul>
+        <div id="div-user-action" class="pmt-horizonal">
+            <a class="k-button" href="javascript:" onclick="showPopupThayDoiMatKhau()">
+            <span>Đổi mật khẩu</span>
+        </a>
+            <a class="k-button" href="javascript:" onclick="logoff()">
+            <span>Đăng xuất</span>
+        </a>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        //$('#div-user-action').toolbar({
+        //    content: '#user-toolbar-options',
+        //    position: 'bottom',
+        //    hideOnClick : true
+        //});
+        $("#btn_Xoa_Cache").on('click', function() {
+            var url = window.location.href;
+            $.ajax({
+                type: 'POST',
+                url: location.replace("/hcm/Home/ClearCache"),
+                dataType: 'html',
+                data: {
+                    returnUrl: url
+                },
+                success: function(result) {
+                    location.reload();
+                },
+                error: function(e) {
+                    $.warning("Chưa xóa được bộ nhớ đệm");
+                }
+            });
+        });
+    });
+
+    function logoff() {
+        $.confirm("Bạn có chắc muốn thoát?", function() {
+            {
+                location.replace("/hcm/Account/LogOff");
+                //window.location.href = "/hcm/Account/LogOff";
+
+            }
+        });
+    }
+    </script>
+    <script type="text/x-kendo-template" id="buttonExportTemplate">
+        <a class="k-button  " data-action-url="/hcm/Common/ExportExcelAuto" data-button-export="true" data-button-type="button" href="javascript:" id="btnDownloadExport" name="btnDownloadExport" onclick=" $(&quot;###=gridID#&quot;).gridExportExcelEx(&quot;/hcm/Common/ExportExcelAuto&quot;, &quot;&quot;, 1);" title="Xuất excel"><span class="p-i-Export"></span></a><a class="k-button  " data-action-url="/hcm/Common/ExportExcelAuto" data-button-export="true" data-button-type="button" href="javascript:" id="btnPrintExport" name="btnPrintExport" onclick=" $(&quot;###=gridID#&quot;).gridExportExcelEx(&quot;/hcm/Common/ExportExcelAuto&quot;, &quot;&quot;, 2);" title="In"><span class="p-i-print"></span></a>
+    </script>
+    <script>
+    var menu = $("#context")
+        .addClass("k-context-menu")
+        .kendoMenu({ orientation: "vertical" })
+        .data("kendoMenu");
+    var popup = $("#popup").kendoPopup({
+        anchor: $("#linkUserInfo"),
+        collision: "fit flip"
+    }).data("kendoPopup");
+
+    $("#linkUserInfo").on("click", function(e) {
+        popup.wrapper.hide();
+        popup.open(e.pageX - 165, 55);
+        e.preventDefault();
+    });
+
+    $(document).ready(function() {
+        $(".pmt-user-preferences").fadeIn();
+        //Kiêm tra nhập liệu
+        if (('' == '' || '' == null) && 'True' == 'True') {
+            KiemTraXacNhanDuLieu();
+        }
+
+        //Kiêm tra thông báo mới chưa xử lý
+        if (('' == '' || '' == null) && 'True' == 'True') {
+            KiemTraThongBaoMoiChuaXuLy();
+        }
+    });
+
+
+    gOptions.DonViUser = { "IsGDTX": false, "LoaiDonVi": null, "IDDonVi": null, "IsSoGiaoDuc": false, "IsPhongGDDT": false, "IsTruong": false, "LoaiDonViValue": null, "LoaiDonViString": "", "IDDonViString": "", "IDPhongGDDTString": "", "IDTruongString": "", "IsGDTXPrefer": false, "LoaiDonViPrefer": null, "IDDonViPrefer": null, "IsSoGiaoDucPrefer": false, "IsPhongGDDTPrefer": false, "IsTruongPrefer": false, "LoaiDonViPreferValue": null, "LoaiDonViPreferString": "", "IDDonViPreferString": "", "IDPhongGDDTPreferString": "", "IDTruongPreferString": "", "TenTruongPrefer": null, "IDNienHocPrefer": 21 };
+
+    function onChangePrefer(e) {
+        updatePreferences();
+    }
+
+    function showPopupTruongPrefer() {
+        var popupOptions = {
+
+            isLoadTruongQuanLy: true,
+            callBack: "onTruongPreferSelect",
+            onlyChooseOne: true,
+            isTieuHocTrungHoc: false
+        };
+        showPopupTimKiemTruong(popupOptions);
+    }
+
+    function onTruongPreferSelect(e) {
+        console.log(e);
+        $("#tenTruongPrefer").html(e[0]["TenTruong"]);
+        $("#preIDDonVi").val(e[0]["ID"]);
+        updatePreferences();
+    }
+
+    function updatePreferences() {
+        var idNienHoc = $("#preNienHoc").getKendoDropDownList().value();
+        var idTruong = $("#preIDDonVi").val();
+        var url = "/hcm/Account/ConfigPreferences";
+        $.ajaxPostData(url, { idNienHoc: idNienHoc, idDonVi: idTruong, loaiDonVi: "3" }, function() {
+            location.reload(false);
+        });
+    }
+
+    //Kiểm tra thông báo chưa xư lý
+    function KiemTraThongBaoMoiChuaXuLy() {
+        $.ajax({
+            type: "POST",
+            url: "/hcm/Home/KiemTraThongBaoMoiChuaXuLy",
+            data: {},
+            contentType: "application/json; charset=utf-8",
+            async: true,
+            success: function(res) {
+                //alert(res);
+                if (res > 0) {
+                    showPopupThongBaoMoiChuaXuLy();
+                }
+            }
+        });
+    }
+
+    function showPopupThongBaoMoiChuaXuLy() {
+        $(window).showPopupView("popupThongBaoMoi", '/hcm/Home/PopupThongBaoMoi?isNew=True');
+    }
+
+    //Kiểm tra xác nhận dữ liệu
+    function KiemTraXacNhanDuLieu() {
+        $.ajax({
+            type: "POST",
+            url: "/hcm/Home/KiemTraXacNhanDuLieu",
+            data: {},
+            contentType: "application/json; charset=utf-8",
+            async: true,
+            success: function(res) {
+                if (res == true) {
+                    showPopupThongBaoNhapLieu();
+                }
+            }
+        });
+    }
+
+    function showPopupThongBaoNhapLieu() {
+        $(window).showPopupView("popupThongBaoNhapLieu", '/hcm/Home/ThongBaoXacNhanNhapLieu');
+    }
+
+    function showPopupXacNhanNhapLieu() {
+        $(window).showPopupView("popupXacNhanNhapLieu", '/hcm/Home/XacNhanNhapLieu');
+    }
+
+    function ThongBaoXacNhanNhapLieu() {
+        showPopupXacNhanNhapLieu();
+        $('#popupEditorXacNhanNhapLieu').kendoWindowClose();
+    }
+
+    function openNewWindows(url) {
+        window.open(url, "_blank", "toolbar=no, scrollbars=yes, resizable=yes");
+    }
+
+    $(function() {
+        //$('.help-tailieu').find('a').before('-');
+    });
+
+    function onInTuMayInBieuMau(key) {
+        $.ajax({
+            type: "POST",
+            url: "/hcm/Common/IsHaveSessionPrintName",
+            data: {},
+            contentType: "application/json; charset=utf-8",
+            async: true,
+            success: function(res) {
+                if (res == true) {
+                    inDuLieuTuMayIn(key);
+                } else {
+                    var url = "/hcm/Common/Print" + "?key=" + key;
+                    $(this).showPopupView("idpopupChonMayIn", url);
+                }
+            }
+        });
+
+    }
+
+    function onInTuMayIn(idGrid, url, addition) {
+        $("#" + idGrid).gridExportExcel(url, addition, 3);
+    }
+
+    function inDuLieuTuMayIn(key) {
+        var url = "/hcm/Common/PrinterData";
+        var data = {
+            key: key
+        };
+        $.ajaxPostData(url, data, function() {});
+    }
+    </script>
+    <script src="/hcm/RRContent/616a9d90eda3d2118f3bfdf9a6a004f7-0eceb1d427061229496bd6d2fd9006f1-RequestReducedScript.js" type="text/javascript"></script>
+    <script>
+    ;
+    (function($) {
+
+        $.noty.layouts.bottomRight = {
+            name: 'bottomRight',
+            options: { // overrides options
+
+            },
+            container: {
+                object: '<ul id="noty_bottomRight_layout_container" />',
+                selector: 'ul#noty_bottomRight_layout_container',
+                style: function() {
+                    $(this).css({
+                        bottom: 35,
+                        right: 10,
+                        position: 'fixed',
+                        width: '140px',
+                        height: 'auto',
+                        margin: 0,
+                        padding: 0,
+                        listStyleType: 'none',
+                        zIndex: 10000000
+                    });
+
+                    if (window.innerWidth < 600) {
+                        $(this).css({
+                            right: 5
+                        });
+                    }
+                }
+            },
+            parent: {
+                object: '<li />',
+                selector: 'li',
+                css: {}
+            },
+            css: {
+                display: 'none',
+                width: '140px'
+            },
+            addClass: ''
+        };
+
+    })(jQuery);
+
+    var gConstTB = {
+        urlNoticeInfo: '/hcm/Home/GetNoticeInfo/1',
+        urlThongBaoPopup: '/hcm/Home/ThongBaoPopup',
+        showNotice: true
+
+    };
+    var gVar = {
+        objNoty: null,
+        notyOptions: {}
+    };
+
+    $(document).ready(function() {
+
+
+
+
+
+
+        setTimeout(function() {
+            //$("#middle").addClass("home-background");
+            $("#home-main").fadeIn(1000);
+
+            // Kiểm tra có quyền
+            if (gConstTB.showNotice) {
+
+                // insert div side-tag vào div middle
+                $("#middle").css("position", "relative").append('<div id="side-tag" > <span class=""> Thông báo </span> </div>');
+
+                // Hiển thị thông báo
+                $.ajaxPostData(gConstTB.urlNoticeInfo, null, function(data) {
+                    var template = kendo.template($("#templateNotice").html());
+                    var strContent = template({ SoSinhNhat: data.soSinhNhat, SoNangLuong: data.soNangLuong, SoNghiHuu: data.soNghiHuu, SoHetHanBoNhiem: data.soHetHanBoNhiem, thongBaoMoi: data.thongBaoMoi });
+                    gVar.notyOptions = {
+                        layout: 'bottomRight',
+                        type: 'alert',
+                        text: strContent,
+                        dismissQueue: true, // If you want to use queue feature set this true
+                        template: '<div class="noty_message notice"><div id="notice-title">Thông báo</div><span class="noty_text"></span><div class="noty_close"></div></div>',
+                        animation: {
+                            open: { height: 'toggle' },
+                            close: { height: 'toggle' },
+                            easing: 'swing',
+                            speed: 500 // opening & closing animation speed
+                        },
+                        timeout: false, // delay for closing event. Set false for sticky notifications
+                        force: false, // adds notification to the beginning of queue when set to true
+                        modal: false,
+                        maxVisible: 1, // you can set max visible notification for dismissQueue true option
+                        closeWith: ['button'], // ['click', 'button', 'hover']
+                        callback: {
+                            onShow: function() {
+                                $("#side-tag").fadeOut();
+                            },
+                            afterShow: function() {},
+                            onClose: function() {},
+                            afterClose: function() {
+                                $("#side-tag").fadeIn();
+                            }
+                        },
+                        buttons: false // an array of buttons
+                    };
+                    // Hiện thông báo
+                    gVar.objNoty = noty(gVar.notyOptions);
+
+                    // Sự kiện khi click lên div thông báo
+                    $("#side-tag").on("click", function() {
+                        gVar.notyOptions = $.extend(true, gVar.notyOptions, { layout: 'bottomRight' });
+                        gVar.objNoty = noty(gVar.notyOptions);
+                    });
+                });
+            }
+        }, 1000);
+
+    });
+
+    function showPopupThongBao(index) {
+        $(window).showPopupView("popupThongBao", gConstTB.urlThongBaoPopup + "?tabIndex=" + index);
+    }
+
+    function showPopupThongBaoMoi() {
+        $(window).showPopupView("popupThongBaoMoi", '/hcm/Home/PopupThongBaoMoi');
+    }
+
+    $('a.page').click(function() {
+        $("li a").each(function(index) {
+            if ($("a.page").hasClass('active')) {
+                $("a.page").removeClass('active');
+            };
+        });
+        $(this).addClass("active");
+    });
+
+    function GoToThongBao(i) {
+        var Page;
+        Page = i;
+        $.ajax({
+            url: "/hcm/Home/FirstPage",
+            type: "Post",
+            dataType: "html",
+            data: { Page: Page },
+            success: function(data) {
+                $("#quanlythongbao").html(data);
+            }
+        });
+    };
+    </script>
+</body>
+
+</html>

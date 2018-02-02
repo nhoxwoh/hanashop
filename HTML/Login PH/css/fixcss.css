@@ -1,0 +1,88 @@
+.nav_menu {
+    background: #337ab7;
+}
+
+.nav>li>a {
+    padding: 5px;
+}
+
+.nav.navbar-nav>li>a {
+    color: #fff !important;
+}
+
+html,
+body {
+    color: #2a3f54;
+}
+
+.toggle {
+    padding-top: 5px;
+}
+
+.toggle a i {
+    color: #fff !important;
+}
+
+.page-title {
+    width: 100%;
+    height: 65px;
+    padding: 8px 0;
+    overflow: hidden;
+}
+
+.profile_details .profile_view .brief {
+    text-align: center;
+}
+
+.profile_details .profile_view .brief i {
+    font-style: normal;
+    font-weight: bold;
+    color: #337ab7;
+}
+
+.profile_details .profile_img {
+    margin-top: 5px;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #2a3f54;
+    border-color: #2a3f54;
+    font-size: 16px;
+}
+
+.panel-primary>.panel-heading h4 {
+    padding-top: 0 !important;
+    font-size: 16px;
+}
+
+.panel-primary {
+    border-color: #2a3f54;
+}
+
+.standard-article-header {
+    font-size: 18px;
+}
+
+.standard-article-header a {
+    color: #337ab7;
+}
+
+.standard-article-header ~ p {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.standard-article-header ~ p span {
+    font-weight: normal !important;
+}
+
+.standard-article-date {
+    background: rgba(255, 255, 255, 0.4) !important;
+    color: #2a3f54 !important;
+}
+
+.standard-author {
+    background: rgba(255, 255, 255, 0.4) !important;
+    color: #2a3f54 !important;
+}

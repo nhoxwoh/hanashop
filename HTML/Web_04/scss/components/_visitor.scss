@@ -1,0 +1,24 @@
+.visitor-box {
+    span {
+        display: block;
+        padding-left: 30px;
+        &.online {
+            background: url(../images/online.png) left center no-repeat;
+        }
+        &.day {
+            background: url(../images/day.png) left center no-repeat;
+        }
+        &.month {
+            background: url(../images/month.png) left center no-repeat;
+        }
+        &.sum-visitor {
+            background: url(../images/visitor.png) left center no-repeat;
+        }
+        i {
+            float: right;
+            font-style: normal;
+            font-weight: 500;
+            color: #40454d;
+        }
+    }
+}

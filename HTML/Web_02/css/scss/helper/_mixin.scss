@@ -1,0 +1,79 @@
+
+@mixin datetext() {
+    font-size: 0.875rem;
+    color: $color-text-date;
+}
+
+@mixin TitlePage($font-size, $pdleft) {
+
+    font-size: $font-size;
+    background: url(../images/bg-title-cateogry-new.png) left center no-repeat;
+    padding-left: $pdleft;
+}
+
+@mixin animation-img($urlIMG) {
+    display: block;
+    overflow: hidden;
+    background: $bgcolor-web;
+    transition: .3s;
+    position: relative;
+    &::before {
+        background: url($urlIMG) no-repeat scroll center center / cover;
+        bottom: 0;
+        content: "";
+        left: 0;
+        margin: auto;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 400ms ease 0s;
+        transition: all 400ms ease 0s;
+        visibility: hidden;
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@mixin animation-img-hover() {
+    &::before {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@mixin Get-animation($img-icon) {
+
+    .icon-ani {
+        @include animation-img($img-icon);
+    } //Galerry
+    &:hover {
+
+        .icon-ani {
+            @include animation-img-hover();
+        }
+  
+    }
+    img {
+        transition: .3s;
+        &:hover {
+            opacity: .2;
+        }
+    }
+}
+
+@mixin base-box() {
+    background: #fff;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+@mixin style-icon() {
+    display: inline-block;
+    color: #e0e0e0;
+}
+

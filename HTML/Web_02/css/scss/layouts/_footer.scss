@@ -1,0 +1,36 @@
+`
+footer {
+
+    .topfooter {
+        margin-top: 30px;
+        padding: 40px 0;
+        background: #525252;
+        color: #ffffff;
+    }
+    .bottom-footer {
+        padding: 15px 0;
+        background: $bgcolor-web;
+        color: #ffffff;
+        font-size: 0.75rem;
+        .designby {
+            float: right;
+        }
+    }
+}
+
+.single-footer {
+    h2 {
+        font-size: 1rem;
+        color: #ffffff;
+    }
+    .single-footer-text {
+        margin-top: 20px;
+        font-size: 0.875rem;
+        p {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: #ffffff;
+        }
+    }
+}

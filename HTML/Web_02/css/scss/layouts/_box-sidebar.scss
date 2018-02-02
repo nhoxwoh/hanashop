@@ -1,0 +1,55 @@
+.single-box-new {
+    margin-bottom: 20px;
+    @include base-box();
+    .single-box-new-title {
+        background: $bgcolor-box;
+        h2 {
+            margin-bottom: 0px;
+            padding: 0.750em 0.625rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #8e8e8e;
+        }
+    }
+    .single-box-new-content {
+
+        padding: 10px;
+        overflow: hidden;
+        .tab-content {
+
+            .list-new {
+                margin-bottom: 15px;
+                overflow: hidden;
+                .image-list-new {
+                    width: 30%;
+                    margin-right: 8px;
+                    float: left;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .detail-list-new {
+
+                    .list-new-text {
+                        h3 {
+                            font-size: 1rem;
+                            font-weight: 500;
+                            a {
+                                line-height: 1rem;
+                            }
+                        }
+
+                        .list-new-date {
+                            span {
+                                @include datetext();
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

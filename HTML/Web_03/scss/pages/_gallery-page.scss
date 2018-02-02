@@ -1,0 +1,33 @@
+.galerry-area {
+    padding: 20px;
+    .single-gallery {
+        margin-bottom: 40px; //Galerry
+        @include Get-animation('../images/arrow.png');
+        .single-gallery-text {
+            margin-top: 5px;
+            text-align: center;
+            h3 {
+                font-size: 1rem;
+                font-weight: normal;
+            }
+        }
+    }
+      .single-video {
+        margin-bottom: 40px; //Video
+        @include Get-animation('../images/play-youtube.png');
+        .single-video-text {
+            margin-top: 5px;
+            text-align: center;
+            h3 {
+                font-size: 1rem;
+                font-weight: normal;
+                
+            }
+        }
+    }
+
+
+}
+.hidden-css{
+    display: none;
+}

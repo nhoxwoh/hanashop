@@ -1,0 +1,84 @@
+.newhot-block {
+    overflow: hidden;
+}
+
+.newhot-area {
+    margin-top: 10px;
+    img {
+        width: 100%;
+        height: auto;
+        transition: 0.5s;
+    }
+}
+
+.newhot-block-root {
+
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.newhot-block-child {
+
+    float: left;
+
+    .newhot-block-child-item {
+        margin-bottom: 10px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        .newhot-block-title {
+
+            h2 {
+                font-size: 1rem;
+                line-height: 1.2;
+                a {
+                    color: #fff;
+                }
+            }
+            h4 {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+.newhot-block-link {
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+        & ~ .newhot-block-title{
+            background: rgba(250, 0, 0, 0.7);
+        }
+    }
+}
+
+.newhot-block-title {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background: rgba(250, 0, 0, 0);
+    h2 {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin: 5px 0 0 0;
+        font-weight: 400;
+
+        a {
+            color: #fff;
+        }
+    }
+    h4 {
+        font-size: 0.75rem;
+        background: rgba(255, 255, 255, 0.2);
+        display: inline;
+        padding: 0 10px;
+        font-weight: 400;
+        margin: 0;
+        a {
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.breadcrumb-text {
+    margin-bottom: 10px;
+    overflow: hidden;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            float: left;
+            list-style: none;
+            margin-right: 8px;
+            &:first-child {}
+            &:last-child {
+                h2 {
+                    a {
+                        color: #7a7a7a;
+                    }
+                }
+            }
+            h2 {
+                font-size: 0.876rem;
+                font-weight: 500;
+                float: left;
+                margin-right: 8px;
+                a {}
+            }
+            i {
+                float: left;
+                color: $color-text-date;
+                margin-top: 1px;
+            }
+        }
+    }
+}

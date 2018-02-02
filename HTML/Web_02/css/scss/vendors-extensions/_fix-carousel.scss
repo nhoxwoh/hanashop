@@ -1,0 +1,45 @@
+
+.owl-nav {
+    position: absolute;
+    right: 0;
+    top: -45px;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    position: relative;
+    display: inline-block !important;
+    background: #dcdcdc;
+    text-indent: -9999px;
+    height: 20px;
+    width: 25px;
+    margin-left: 4px;
+}
+
+.owl-nav .owl-prev::before,
+.owl-nav .owl-next::before {
+    font-family: "FontAwesome";
+    font-feature-settings: "liga";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: inherit;
+    position: absolute;
+    text-align: center;
+    text-indent: 0px;
+    right: 10px;
+    color: #fff;
+    font-size: 15px;
+    top: -3px;
+}
+
+.owl-nav .owl-prev::before {
+    content: "\f104";
+}
+
+.owl-nav .owl-next::before {
+    content: "\f105";
+}
+
+
+

@@ -1,0 +1,94 @@
+.main-menu {
+    width: 100%;
+    
+    margin-top: 1px;
+}
+
+@keyframes menu-drop {
+    0%   {opacity:0.2}
+    100% {opacity:1}
+}
+.animation-menuhv{
+     animation-name: menu-drop;
+     animation-duration: 0.7s;
+}
+.nav-menu {
+    position: relative;
+    @include linear-gardient($BgColor,15%);
+    ul {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+
+        li {
+
+            list-style: none;
+            a {
+                display: block;
+                color: $TextColor_Menu;
+                font-size: 0.875rem;
+                padding: 1rem;
+                text-transform: uppercase;
+                &.nav-menu-link:hover {
+                    color: $TextColor_MenuHover;
+                }
+            }
+        }
+    }
+    .dropmenu {
+        .drop-link {
+            &::after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 0.5em;
+                vertical-align: 0.255em;
+                content: "";
+                border-top: 0.3em solid;
+                border-right: 0.3em solid transparent;
+                border-bottom: 0;
+                border-left: 0.3em solid transparent;
+            }
+        }
+
+        &.active {
+            .nav-menu-link {
+                color: $TextColor_MenuHover;
+            }
+        }
+        &:hover {
+
+            ul {
+                display: block;
+            }
+        }
+        ul {
+            display: none;
+            position: absolute;
+            top: 100%; //left:0;
+            background: $BgColor;
+            padding: 0.5rem 0;
+            z-index: 1000;
+            .dropmenu-link {
+                display: block;
+                width: 100%;
+                padding: 0.5rem 1.5rem;
+                clear: both;
+                font-weight: 400;
+                text-align: inherit;
+                white-space: nowrap;
+                background: none;
+                border: 0;
+                &:hover {
+                    color: $TextColor_MenuHover;
+                }
+            }
+        }
+    }
+}
+

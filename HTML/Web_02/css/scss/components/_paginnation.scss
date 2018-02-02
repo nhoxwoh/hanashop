@@ -1,0 +1,24 @@
+
+.paginnation-style {
+    text-align: center;
+    margin-top: 10px;
+    ul {
+
+        li {
+            display: inline;
+            list-style: none;
+            a {
+                background: #c3c3c3;
+                color: $color-text-new-child;
+                padding: 5px 15px;
+                border-radius: 5px;
+
+                &:hover {
+                    background: darken(#c3c3c3, 30%);
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
