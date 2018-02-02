@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans";
+    color: $color-text;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
+a {
+    color: $color-text;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 65%;
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.title-page{
+    h2{
+          @include TitlePage(1.5rem, 20px);
+          margin-bottom: 15px;
+    }
+}
+.hidden-css{
+    display: none;
+}

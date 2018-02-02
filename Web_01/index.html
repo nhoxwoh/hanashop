@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web_04</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/responsiveslides.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/responsiveslides.js"></script>
+    <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="js/gallery.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/viewportchecker.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script>
+    </script>
+    <noscript>
+        <style>
+        .es-carousel ul {
+            display: block;
+        }
+        </style>
+    </noscript>
+    <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+        <div class="rg-image-wrapper">
+            <!--         {{if itemsCount > 1}}
+            <div class="rg-image-nav">
+                <a href="#" class="rg-image-nav-prev">Previous Image</a>
+                <a href="#" class="rg-image-nav-next">Next Image</a>
+            </div>
+            {{/if}} -->
+            <div class="rg-image"></div>
+            <div class="rg-loading"></div>
+            <div class="rg-caption-wrapper">
+                <div class="rg-caption" style="display:none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="banner-logo">
+                        <a href="#"><img class="img-fluid" src="images/tmp/banner.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+    <div class="main-menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">GIỚI THIỆU</a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="category.html">
+                                TIN TỨC
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="type-news.html">Loại tin tức 1</a>
+                                <a class="dropdown-item" href="type-news.html">Loại tin tức 2</a>
+                                <a class="dropdown-item" href="type-news.html">Loại tin tức 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">VĂN BẢNG - CÔNG VĂN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="download.html">TÀI NGUYÊN DOWNLOAD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery-image.html">THƯ VIỆN ẢNH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="video-clip.html">VIDEO CLIP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header-search">
+                    <li class="search-menu">
+                        <i id="toggle-search" class="fa fa-search"></i>
+                    </li>
+                </ul>
+                <div class="search">
+                    <div class="search-form">
+                        <form id="search-form" action="#">
+                            <input placeholder="Search here..." name="search" type="search">
+                            <button type="submit">
+                                <span><i class="fa fa-search"></i></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End Menu -->
+    <div class="slider-banner">
+        <div class="container">
+            <ul class="rslides">
+                <li><img src="images/tmp/slide-1.png" alt=""></li>
+                <li><img src="images/tmp/slide-2.png" alt=""></li>
+                <li><img src="images/tmp/slide-3.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End slider banner -->
+    <div class="notification-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-wrapper">
+                        <div class="section-title">
+                            <h3>TIN THÔNG BÁO</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="single-item-image">
+                            <a href="#"><img src="images/tmp/news/hoithivannghe.jpg" alt=""></a>
+                        </div>
+                        <div class="single-item-text">
+                            <h3><a href="#">Hội thi Văn nghệ Chào mừng Ngày nhà giáo Việt Nam </a></h3>
+                            <div class="single-item-date">
+                                <span>7/11/2017</span>
+                            </div>
+                            <div class="single-item-content">
+                                Trong khuôn khổ các hoạt động Chào mừng 35 năm Ngày nhà giáo Việt Nam (20/11/1982 - 20/11/2017), chiều ngày 04 tháng 11 năm 2017
+                            </div>
+                        </div>
+                        <div class="button-bottom">
+                            <a href="#" class="read-more">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="single-item-image">
+                            <a href="#"><img src="images/tmp/news/daihoidaibieu.jpg" alt=""></a>
+                        </div>
+                        <div class="single-item-text">
+                            <h3><a href="#">Đại hội Đại biểu Đoàn TNCS HCM Trường THPT Nguyễn Thị Minh Khai</a></h3>
+                            <div class="single-item-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-item-content">
+                                Với khẩu hiệu hành động “Tuổi trẻ Minh Khai vươn lên tầm cao mới, năng động, bản lĩnh, khám phá tri thức”, Đại hội Đại biểu Đoàn TNCS HCM
+                            </div>
+                        </div>
+                        <div class="button-bottom">
+                            <a href="#" class="read-more">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-item">
+                        <div class="single-item-image">
+                            <a href="#"><img src="images/tmp/news/taphuancanbo.jpg" alt=""></a>
+                        </div>
+                        <div class="single-item-text">
+                            <h3><a href="#">Tập huấn cán bộ Đoàn - Sinh hoạt kĩ năng trại</a></h3>
+                            <div class="single-item-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-item-content">
+                                Ngày 02/12/2017, Ban Chấp hành Đoàn trường trung học phổ thông Nguyễn Thị Minh Khai tổ chức buổi tập huấn Cán bộ đoàn dành cho các bạn.
+                            </div>
+                        </div>
+                        <div class="button-bottom">
+                            <a href="#" class="read-more">Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-lg col-md-6">
+                    <div class="single-item">
+                        <div class="single-item-image">
+                            <a href="#"><img src="images/tmp/news/daihoidaibieu.jpg" alt=""></a>
+                        </div>
+                        <div class="single-item-text">
+                            <h3><a href="#">Tập huấn cán bộ Đoàn - Sinh hoạt kĩ năng trại</a></h3>
+                            <div class="single-item-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-item-content">
+                                Ngày 02/12/2017, Ban Chấp hành Đoàn trường trung học phổ thông Nguyễn Thị Minh Khai tổ chức buổi tập huấn Cán bộ đoàn dành cho các bạn.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-bottom">
+                        <a href="#" class="read-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End thông báo -->
+    <div class="box-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <a href="#"><img src="images/tmp/img-about.png" alt=""></a>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="title-about"><a href="#">GIỚI THIỆU TRƯỜNG</a></h3>
+                    <div class="content-about">
+                        Nằm ở khu vực trung tâm thành phố, được bao bọc bởi bốn giao lộ đông người, thờ ơ với những bon chen, náo nhiệt của phố phường, ngôi trường đã trở thành một chốn bình yên đi về phủ đầy cây xanh bóng mát, là đất lành nuôi dưỡng tâm hồn và vun đắp tri thức cho biết bao lớp học trò trưởng thành và vinh danh cho đời. Được khởi công xây dựng từ năm 1913, từ tâm huyết của những người trí thức yêu nước quan tâm đến vấn đề giáo dục nữ giới, đến nay đã gần trăm năm tuổi.
+                    </div>
+                    <div class="button-bottom">
+                        <a href="#" class="read-more">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End giới thiệu -->
+    <div class="news-category-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-wrapper">
+                        <div class="section-title">
+                            <h3>ĐOÀN THỂ - PHÒNG BAN</h3>
+                            <div class="section-title-child">
+                                <a href="#" class="title-child">ĐOÀN TRƯỜNG</a>
+                                <a href="#" class="title-child">CÔNG ĐOÀN </a>
+                                <a href="#" class="title-child">CHI ĐOÀN GIÁO VIÊN </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/ketnap.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Lễ kết nạp Đoàn viên mới năm học 2016-2017</a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/doan-truong-2.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Đại hội Đoàn viên Chi Đoàn Giáo viên nhiệm kỳ 2017-2019</a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/doan-truong-3.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Học sinh trường nói không với văn hóa phẩm độc hại</a></h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/doan-truong-4.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Hội thi Văn nghệ Chào mừng Ngày nhà giáo Việt Nam</a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/doan-truong-3.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Hội thi Văn nghệ Chào mừng Ngày nhà giáo Việt Nam</a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/doan-truong-2.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Hội thi Văn nghệ Chào mừng Ngày nhà giáo Việt Nam</a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End category new -->
+    <div class="category-other-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-wrapper">
+                        <div class="section-title">
+                            <h3>MÔN HỌC</h3>
+                            <div class="section-title-child">
+                                <a href="#" class="title-child">TOÁN</a>
+                                <a href="#" class="title-child">LÝ</a>
+                                <a href="#" class="title-child">SINH</a>
+                                <a href="#" class="title-child">SỬ</a>
+                                <a href="#" class="title-child">ĐỊA</a>
+                                <a href="#" class="title-child">ANH VĂN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Tiết thao giảng của Thầy Võ Duy Cương tại lớp 11Cti  </a></h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/thao-giang-2.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Tiết thao giảng của cô Nguyễn Thị Tuyết Nga </a></h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/doan-truong-2.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Lý luận về phương pháp bàn tay nặn bột  </a></h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/mon-hoc.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#"> Học vật lý phải đi kèm với thực nghiệm </a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/thao-giang-2.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#">Cuộc thi hùng biện quốc tế Asakura tại Japan </a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-category-item">
+                        <div class="single-category-image">
+                            <a href="#"><img src="images/tmp/news/ga-la.png" alt=""></a>
+                        </div>
+                        <div class="single-category-text">
+                            <h3><a href="#"> Gala Tiếng Anh - English Gala 2015 </a> </h3>
+                            <div class="single-category-date">
+                                <span>Thứ 2, 20/12/2017</span>
+                            </div>
+                            <div class="single-category-content">
+                                GD&TĐ - Đến nay, vùng ĐBSCL có 2 trường ĐH thực hiện thí điểm đổi mới cơ chế hoạt động theo hướng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End category other -->
+    <div class="video-clip-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single-video-root">
+                        <h3 class="title-video-root">THƯ VIỆN ẢNH</h3>
+                        <div id="rg-gallery" class="rg-gallery">
+                            <div class="rg-thumbs">
+                                <!-- Elastislide Carousel Thumbnail Viewer -->
+                                <div class="es-carousel-wrapper">
+                                    <div class="es-nav">
+                                        <span class="es-nav-prev">Previous</span>
+                                        <span class="es-nav-next">Next</span>
+                                    </div>
+                                    <div class="es-carousel">
+                                        <ul>
+                                            <li><a href="#"><img src="images/tmp/thumbs/1.jpg" data-large="images/tmp/1.jpg" alt="image01"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/2.jpg" data-large="images/tmp/2.jpg" alt="image02"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/3.jpg" data-large="images/tmp/3.jpg" alt="image03" /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/4.jpg" data-large="images/tmp/4.jpg" alt="image04" /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/5.jpg" data-large="images/tmp/5.jpg" alt="image05"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/6.jpg" data-large="images/tmp/6.jpg" alt="image05"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/7.jpg" data-large="images/tmp/7.jpg" alt="image05"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/8.jpg" data-large="images/tmp/8.jpg" alt="image05"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/9.jpg" data-large="images/tmp/9.jpg" alt="image05"  /></a></li>
+                                            <li><a href="#"><img src="images/tmp/thumbs/10.jpg" data-large="images/tmp/10.jpg" alt="image05"  /></a></li>
+                                    </div>
+                                </div>
+                                <!-- End Elastislide Carousel Thumbnail Viewer -->
+                            </div>
+                            <!-- rg-thumbs -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="title-video-child">THƯ VIỆN VIDEO</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single-video">
+                                <div class="single-video-frame">
+                                    <iframe src="https://www.youtube.com/embed/gxVPUd3cZvQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="single-video-title">
+                                    <h3><a href="#">Hội thi Văn nghệ chào mừng nhà giáo VN</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-video">
+                                <div class="single-video-frame">
+                                    <iframe src="https://www.youtube.com/embed/AEcF9rnlCLc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="single-video-title">
+                                    <h3><a href="#">THPT Nguyễn Thị Minh Khai 50 Năm Dựng Xây và Phát Triển </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-video">
+                                <div class="single-video-frame">
+                                    <iframe src="https://www.youtube.com/embed/gxVPUd3cZvQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="single-video-title">
+                                    <h3><a href="#">Hội thi Văn nghệ chào mừng nhà giáo VN</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="single-video">
+                                <div class="single-video-frame">
+                                    <iframe src="https://www.youtube.com/embed/gxVPUd3cZvQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="single-video-title">
+                                    <h3><a href="#">Hội thi Văn nghệ chào mừng nhà giáo VN</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Video clip -->
+    <div class="other-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="single-group group-news">
+                        <div class="single-title-group">
+                            <h2>KẾ HOẠCH CÔNG TÁC</h2>
+                        </div>
+                        <div class="single-group-news">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="single-group-news-item">
+                                        <div class="single-group-news-image">
+                                            <a href=""><img src="images/tmp/news/thao-giang-2.png" alt=""></a>
+                                        </div>
+                                        <div class="single-group-news-text">
+                                            <h4><a href="#">Lịch Kiểm tra tập trung giữa Học kỳ 1</a></h4>
+                                            <div class="single-group-news-content">
+                                                Lịch Kiểm tra tập trung giữa Học kỳ 1 và bảng phân công giáo viên làm giám thị
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-group-news-item">
+                                        <div class="single-group-news-image">
+                                            <a href=""><img src="images/tmp/news/thao-giang.png" alt=""></a>
+                                        </div>
+                                        <div class="single-group-news-text">
+                                            <h4><a href="#">
+
+THỜI KHÓA BIỂU LỚP 12 áp dụng từ ngày 29/11</a></h4>
+                                            <div class="single-group-news-content">
+                                                Nhằm lan toả văn hoá đọc và văn hoá truyền thống bằng những quầy đọc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-group-news-item">
+                                        <div class="single-group-news-image">
+                                            <a href=""><img src="images/tmp/news/doan-truong-4.png" alt=""></a>
+                                        </div>
+                                        <div class="single-group-news-text">
+                                            <h4><a href="#">Tập trung học sinh năm học 2016-2017</a></h4>
+                                            <div class="single-group-news-content">
+                                                Nhằm lan toả văn hoá đọc và văn hoá truyền thống bằng những quầy đọc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-group-news-item">
+                                        <div class="single-group-news-image">
+                                            <a href=""><img src="images/tmp/news/doan-truong-3.png" alt=""></a>
+                                        </div>
+                                        <div class="single-group-news-text">
+                                            <h4><a href="#">Lịch sử dụng PCN - Tuần 16 / 2017-2018</a></h4>
+                                            <div class="single-group-news-content">
+                                                Nhằm lan toả văn hoá đọc và văn hoá truyền thống bằng những quầy đọc
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="single-group group-download">
+                        <div class="single-title-group">
+                            <h2>TÀI LIỆU DOWNLOAD</h2>
+                        </div>
+                        <div class="single-group-download">
+                            <div class="single-group-download-image">
+                                <a href="#"><img src="images/tmp/icon-word.png" alt=""></a>
+                            </div>
+                            <div class="single-group-download-text">
+                                <h4><a href="#">Hội thảo đánh giá 3 năm triển khai cho trẻ mầm non làm quen tiếng Anh</a></h4>
+                                <div class="button-download">
+                                    <a href="#" class="icon-download">Tải về</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-group-download">
+                            <div class="single-group-download-image">
+                                <a href="#"><img src="images/tmp/icon-ppt.png" alt=""></a>
+                            </div>
+                            <div class="single-group-download-text">
+                                <h4><a href="#">Hội thảo đánh giá 3 năm triển khai cho trẻ mầm non làm quen tiếng Anh</a></h4>
+                                <div class="button-download">
+                                    <a href="#" class="icon-download">Tải về</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-group-download">
+                            <div class="single-group-download-image">
+                                <a href="#"><img src="images/tmp/icon-excel.png" alt=""></a>
+                            </div>
+                            <div class="single-group-download-text">
+                                <h4><a href="#">Hội thảo đánh giá 3 năm triển khai cho trẻ mầm non làm quen tiếng Anh</a></h4>
+                                <div class="button-download">
+                                    <a href="#" class="icon-download">Tải về</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="read-more-group-download">
+                            <a href="#">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="banner-adv">
+                        <a href="#"><img src="images/tmp/quangcao.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End gallery area -->
+    <div class="banner-link-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title-wrapper">
+                        <div class="section-title">
+                            <h3>LIÊN KẾT BANNER</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item"> <a href="#"><img src="images/tmp/banner-link-1.png" alt=""></a> </div>
+                        <div class="item"> <a href="#"><img src="images/tmp/banner-link-2.png" alt=""></a> </div>
+                        <div class="item"> <a href="#"><img src="images/tmp/banner-link-3.png" alt=""></a> </div>
+                        <div class="item"> <a href="#"><img src="images/tmp/banner-link-1.png" alt=""></a> </div>
+                        <div class="item"> <a href="#"><img src="images/tmp/banner-link-2.png" alt=""></a> </div>
+                        <div class="item"> <a href="#"><img src="images/tmp/banner-link-3.png" alt=""></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End banner-link-area -->
+    <footer>
+        <div class="topfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer">
+                            <h2>THÔNG TIN LIÊN HỆ</h2>
+                            <div class="single-footer-text">
+                                <p>Địa chỉ: Số 21 Lê Trung Nghĩa, P. 12, Quận Tân Bình, Tp.Hồ Chí Minh</p>
+                                <p>Email: sales@ascvn.com.vn</p>
+                                <p>Điện thoại: (028) 66.797.357</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer">
+                            <h2>VỀ CHÚNG TÔI</h2>
+                            <div class="single-footer-text">
+                                <p><a href="">Giới thiệu</a></p>
+                                <p><a href="">Cơ cấu tổ chức</a></p>
+                                <p><a href="">Thành tích học sinh</a></p>
+                                <p><a href="">Thành tích nhà trường</a></p>
+                                <p><a href="">Thành tích CBGNCNV</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer">
+                            <h2>TIN TỨC</h2>
+                            <div class="single-footer-text">
+                                <p><a href="">Tin nhà trường</a></p>
+                                <p><a href="">Hoạt động - Sự kiện</a></p>
+                                <p><a href="">Đào tạo</a></p>
+                                <p><a href="">Tuyển sinh</a></p>
+                                <p><a href="">Lịch công tác</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <div class="single-footer">
+                            <div class="google-maps">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.142716043483!2d106.64972501422542!3d10.800379561705792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529483194ef29%3A0x342b63815a9b174c!2zMjEgTMOqIFRydW5nIE5naMSpYSwgUGjGsOG7nW5nIDEyLCBUw6JuIELDrG5oLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1512460359773" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"><span>© COPYRIGHT TRƯỜNG THPT NGUYỄN THỊ MINH KHAI</span></div>
+                    <div class="col-md-6">
+                        <div class="float-right">
+                            <span>THIẾT KẾ & PHÁT TRIỂN BỞI ASC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

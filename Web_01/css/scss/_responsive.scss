@@ -1,0 +1,107 @@
+@media (max-width: 767px) {
+    .navbar-nav {
+        .nav-item {
+            a {
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        }
+    }
+    .single-category-item {
+
+        .single-category-image {
+            float: none;
+            img {
+                width: 100%
+            }
+        }
+    }
+
+    .single-video-root {
+        margin-bottom: 20px;
+    }
+
+    .other-area {
+        padding-bottom: 0px;
+        .single-group {
+            margin-bottom: 40px
+        }
+        .single-group-download {
+            .single-group-download-image {
+                width: 100% !important;
+                float: none !important;
+                margin-bottom: 15px;
+                margin-right: 0px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .single-news-list-text {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 10px;
+    }
+
+    .single-category-list {
+     
+        .single-category-list-image {
+            width: 100%;
+            float: none;
+            margin-right: 0;
+            margin-bottom: 10px;
+            
+        }
+        
+    }
+}
+
+@media (max-width: 991px) {
+
+    .single-item {
+
+        .single-item-image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .single-category-item {
+
+        .single-category-image {
+            float: none;
+            width: 100%;
+            img {
+                width: 100%
+            }
+        }
+    }
+
+
+    .single-group-news {
+
+
+        .single-group-news-item {
+
+            .single-group-news-image {
+                img {
+                    width: 100%;
+                }
+            }
+            .single-group-news-text {
+
+                .single-group-news-content {}
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .hidden-lg {
+        display: none;
+    }
+}
+

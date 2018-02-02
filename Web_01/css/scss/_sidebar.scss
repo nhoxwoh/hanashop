@@ -1,0 +1,51 @@
+.box-sidebar {
+    background: #f6f6f6 none repeat scroll 0 0;
+    padding: 0 20px 10px 20px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    .box-sidebar-title {
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        top: -20px;
+        h2 {
+            font-size: 1.250rem;
+            color: #ffffff;
+            background: #3e4196;
+            display: inline-block;
+            padding: 10px 25px;
+        }
+    }
+    .box-sidebar-list {
+        margin-bottom: 25px;
+        overflow: hidden;
+       position:relative;
+       top:-10px;
+       .box-sidebar-list-image{
+        float: left;
+        width: 40%;
+        margin-right: 15px;
+       }
+        .box-sidebar-list-text {
+            
+            h4 {
+                font-size:0.875rem;
+                font-weight: 600;
+                margin-bottom: 0px;
+                a{
+                    color:$color-text-new-child;
+                    &:hover{
+                        color:$color-text-new-child-hover;
+                    }
+                }
+            }
+            .box-sidebar-list-date{
+                 @include datetext();
+                 margin-top: 3px;
+            }
+
+        }
+    }
+}

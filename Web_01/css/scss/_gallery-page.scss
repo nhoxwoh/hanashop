@@ -1,0 +1,32 @@
+.single-gallery {
+    margin-bottom: 20px; //Galerry
+    .plus-icon {
+        @include animation-img('../images/arrow.png');
+    } //Galerry
+    .play-icon {
+        @include animation-img('../images/play-youtube.png');
+    }
+    &:hover {
+
+        .plus-icon {
+            @include animation-img-hover();
+        }
+        .play-icon {
+            @include animation-img-hover();
+        }
+    }
+    img {
+        transition: .3s;
+        &:hover {
+            opacity: .2;
+            background: rgba(63, 81, 181, 0.85);
+        }
+    }
+    .single-gallery-text {
+        margin-top: 5px;
+        text-align: center;
+        h3 {
+            font-size: 1rem;
+        }
+    }
+}
